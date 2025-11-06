@@ -1,1 +1,129 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Site Pessoal</title>
+
+  <!-- Arquivo CSS externo -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Scripts externos -->
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="/_sdk/data_sdk.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 id="site-title">Malu Girelli</h1>
+      <p class="subtitle" id="site-subtitle">Desenvolvedor & Designer</p>
+    </header>
+
+    <!-- Navegação -->
+    <nav>
+      <button class="nav-btn active" data-section="about">Sobre Mim</button>
+      <button class="nav-btn" data-section="dreams">Sonhos</button>
+      <button class="nav-btn" data-section="studies">Estudos</button>
+      <button class="nav-btn" data-section="friends">Amigos</button>
+      <button class="nav-btn" data-section="family">Família</button>
+    </nav>
+
+    <!-- Seções -->
+    <section id="about" class="section active">
+      <div class="hero-section">
+        <div class="profile-photo">👤</div>
+        <div class="about-content">
+          <h2 class="section-title" id="about-title">Sobre Mim</h2>
+          <p class="about-text" id="about-text">
+            Olá! Sou uma pessoa apaixonada por tecnologia e design. Adoro criar soluções que fazem a diferença na vida das pessoas. Sempre em busca de novos desafios e oportunidades de crescimento.
+          </p>
+        </div>
+      </div>
+
+      <h3 class="section-title" id="personality-title">Minha Personalidade</h3>
+      <div class="personality-tabs">
+        <button class="tab-btn active" data-tab="trait1">Carinhosa</button>
+        <button class="tab-btn" data-tab="trait2">Determinado</button>
+        <button class="tab-btn" data-tab="trait3">Sociável</button>
+      </div>
+
+      <div id="trait1" class="tab-content active">
+        <h4 class="trait-title" id="trait-1-title">Criativo</h4>
+        <p class="trait-description" id="trait-1-desc">Sempre buscando soluções inovadoras e pensando fora da caixa. A criatividade é minha ferramenta para resolver problemas complexos.</p>
+      </div>
+      <div id="trait2" class="tab-content">
+        <h4 class="trait-title" id="trait-2-title">Determinado</h4>
+        <p class="trait-description" id="trait-2-desc">Não desisto facilmente dos meus objetivos. Quando me proponho a fazer algo, vou até o fim com dedicação e persistência.</p>
+      </div>
+      <div id="trait3" class="tab-content">
+        <h4 class="trait-title" id="trait-3-title">Sociável</h4>
+        <p class="trait-description" id="trait-3-desc">Adoro conhecer pessoas e fazer novos amigos. Acredito que as melhores ideias surgem quando trabalhamos em equipe.</p>
+      </div>
+    </section>
+
+    <section id="dreams" class="section">
+      <h2 class="section-title" id="dreams-title">Meus Sonhos</h2>
+      <div class="content-grid">
+        <div class="content-card">
+          <h3 class="card-title">🌍 Viajar</h3>
+          <p class="card-text" id="dream-1">Viajar pelo mundo e conhecer novas culturas</p>
+        </div>
+        <div class="content-card">
+          <h3 class="card-title">🏡 Casa</h3>
+          <p class="card-text" id="dream-2">Construir minha casa dos sonhos, bem aconchegante</p>
+        </div>
+        <div class="content-card">
+          <h3 class="card-title">📚 Aprender</h3>
+          <p class="card-text" id="dream-3">Aprender novos idiomas e habilidades</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="studies" class="section">
+      <h2 class="section-title" id="studies-title">Meus Estudos</h2>
+      <div class="content-grid">
+        <div class="content-card">
+          <h3 class="card-title">🎓 Formação</h3>
+          <p class="card-text" id="current-study">Cursando Engenharia Mecanica</p>
+        </div>
+        <div class="content-card">
+          <h3 class="card-title">💼 Carreira</h3>
+          <p class="card-text" id="future-career">Desenvolvedor de projetos de carros</p>
+        </div>
+        <div class="content-card">
+          <h3 class="card-title">🚀 Objetivos</h3>
+          <p class="card-text" id="career-goals">Futuramente poder consetar carros e ter minha propria mecanica</p>
+        </div>
+      </div>
+      <div class="simple-content">
+        <p class="simple-text" id="studies-description">
+          Os estudos são a base para alcançar meus objetivos profissionais. Cada dia de aprendizado me aproxima mais do meu sonho de trabalhar com tecnologia.
+        </p>
+      </div>
+    </section>
+
+    <section id="friends" class="section">
+      <h2 class="section-title" id="friends-title">Meus Amigos</h2>
+      <div class="simple-content">
+        <p class="simple-text" id="friends-text">
+          Amigos são a família que escolhemos. São aqueles que estão ao nosso lado nos momentos bons e ruins, que nos fazem rir e nos apoiam em nossos sonhos.
+        </p>
+      </div>
+    </section>
+
+    <section id="family" class="section">
+      <h2 class="section-title" id="family-title">Minha Família</h2>
+      <div class="simple-content">
+        <p class="simple-text" id="family-text">
+          A família é meu porto seguro, minha base e meu maior tesouro. São as pessoas que me conhecem de verdade e que sempre estarão presentes.
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <!-- Arquivo JS externo -->
+  <script src="script.js"></script>
+</body>
+</html>
 
