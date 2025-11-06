@@ -195,12 +195,27 @@ nav {
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
-}
-
+}  
 /* Responsivo */
 @media (max-width: 768px) {
   h1 { font-size: 2.2em; }
   .section-title { font-size: 2em; }
   .profile-photo { width: 150px; height: 150px; font-size: 3em; }
 }
+/* Adicione estas linhas ao seu arquivo style.css */
+body {
+  font-size: 18px; /* Tamanho base maior para leitura geral */
+}
 
+#site-title {
+  font-size: 3.5em; /* Ajuste o valor conforme desejar */
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 1.5em; /* Ex: 1.5 vezes o tamanho base */
+}
+
+.section-title {
+  font-size: 2em;
+}
