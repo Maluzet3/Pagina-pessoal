@@ -219,3 +219,57 @@ body {
 .section-title {
   font-size: 2em;
 }
+/* Estilizando o container da foto (se a imagem for circular ou tiver bordas) */
+.profile-photo {
+    /* Garante que o container se ajuste à imagem */
+    width: fit-content; 
+    height: fit-content;
+    /* Adicione margens se necessário para separá-lo do texto */
+    margin: 0 auto 15px auto; /* Centraliza horizontalmente e adiciona margem inferior */
+}
+
+/* Estilizando a imagem em si */
+.profile-photo img {
+    /* Define um tamanho pequeno e fixo para a imagem */
+    width: 120px; 
+    height: 120px;
+    /* Garante que a imagem seja exibida como um bloco para o 'margin: auto' funcionar se usado */
+    display: block; 
+    /* Opcional: Para fazer a imagem ficar redonda */
+    border-radius: 50%;
+    /* Garante que a imagem preencha o espaço sem distorcer (cortando se necessário) */
+    object-fit: cover; 
+    /* Opcional: Adiciona uma borda */
+    border: 3px solid #f0f0f0; 
+}/* Estilo para o container das imagens (usa Flexbox para alinhar) */
+.card-images {
+    display: flex; /* Habilita o Flexbox */
+    justify-content: space-between; /* Distribui as imagens uniformemente (opcional) */
+    align-items: center; /* Alinha verticalmente */
+    margin-top: 10px; /* Adiciona um pequeno espaço acima das imagens */
+    margin-bottom: 10px; /* Adiciona um pequeno espaço abaixo das imagens */
+    width: 100%; /* Garante que o container use toda a largura do card */
+}
+
+/* Estilo para as imagens individuais */
+.card-images img {
+    /* Define a largura de cada imagem para que caibam 3 lado a lado com espaço */
+    /* 33.33% daria 3 imagens perfeitas, mas usamos um pouco menos para a margem entre elas */
+    width: 30%; 
+    height: auto; /* Mantém a proporção da altura automaticamente */
+    
+    /* Opcional: Se quiser que as imagens tenham altura fixa, adicione: */
+    /* height: 80px;
+    object-fit: cover; /* Para preencher o espaço sem distorcer, cortando se necessário */
+    
+    /* Opcional: Borda arredondada suave */
+    border-radius: 8px; 
+}
+
+/* Opcional: Para melhorar o visual geral do card */
+.content-card {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    /* Outros estilos do card... */
+}
