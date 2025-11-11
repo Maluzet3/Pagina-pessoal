@@ -272,4 +272,28 @@ body {
     border: 1px solid #ccc;
     border-radius: 10px;
     /* Outros estilos do card... */
+}/* Estilo para a imagem grande da seção Amigos */
+.friends-image-container img {
+    /* Faz a imagem ocupar 100% da largura do seu container */
+    width: 100%; 
+    
+    /* Mantém a proporção da imagem. Essencial! */
+    height: auto; 
+    
+    /* Garante que não haja espaço indesejado abaixo da imagem */
+    display: block; 
+    
+    /* Opcional: Adiciona margem acima/abaixo para separá-la do texto */
+    margin-top: 15px;
+    margin-bottom: 20px;
+}/* Exemplo de classe genérica no CSS */
+.full-width-image {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+    margin-top: 15px;
+    margin-bottom: 20px;
 }
+
+/* E no HTML, a tag img ficaria assim: */
+<img class="full-width-image" src="caminho/para/sua/imagem-dos-amigos.jpg" alt="Foto dos Meus Amigos">
