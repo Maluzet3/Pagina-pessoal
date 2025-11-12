@@ -1,142 +1,260 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meu Site Pessoal</title>
-
-    <link rel="stylesheet" href="style.css">
-
-    <script src="/_sdk/element_sdk.js"></script>
-  <script src="/_sdk/data_sdk.js"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-  <div class="container">
-    <header>
-      <h1 id="site-title">Malu Girelli</h1>
-      <p class="subtitle" id="site-subtitle">Corajosa & Chorona</p>
-    </header>
-
-        <nav>
-      <button class="nav-btn active" data-section="about">Sobre Mim</button>
-      <button class="nav-btn" data-section="dreams">Sonhos</button>
-      <button class="nav-btn" data-section="studies">Estudos</button>
-      <button class="nav-btn" data-section="friends">Amigos</button>
-      <button class="nav-btn" data-section="family">Família</button>
-    </nav>
-
-        <section id="about" class="section active">
-      <div class="hero-section">
-        <div class="profile-photo">
-            <img src="caminho/para/sua/imagem.jpg" alt="Sua Foto de Perfil">
-        </div>
-        <div class="about-content">
-            <h2 class="section-title" id="about-title">Sobre Mim</h2>
-            <p class="about-text" id="about-text">
-                Olá! Sou uma pessoa apaixonada por tecnologia e design. Adoro criar soluções que fazem a diferença na vida das pessoas. Sempre em busca de novos desafios e oportunidades de crescimento.
-            </p>
-        </div>
-      </div>       <h3 class="section-title" id="personality-title">Minha Personalidade</h3>
-      <div class="personality-tabs">
-        <button class="tab-btn active" data-tab="trait1">Carinhosa</button>
-        <button class="tab-btn" data-tab="trait2">Determinado</button>
-        <button class="tab-btn" data-tab="trait3">Sociável</button>
-      </div>
-
-      <div id="trait1" class="tab-content active">
-        <h4 class="trait-title" id="trait-1-title">Carinhosa</h4>
-        <p class="trait-description" id="trait-1-desc">Ser uma pessoa carinhosa é algo que me faz sentir bem, porque acredito que os pequenos gestos de afeto têm um grande poder. Eu tento sempre estar atento às necessidades das pessoas ao meu redor, seja com um sorriso, um abraço apertado ou palavras que confortem. Gosto de criar um ambiente de carinho e compreensão, onde as pessoas se sintam à vontade para serem elas mesmas. Para mim, ser carinhoso não é apenas sobre gestos visíveis, mas também sobre estar presente e mostrar que me importo de verdade. Acredito que, quando somos carinhosos, conseguimos transformar o dia de alguém e tornar o mundo ao nosso redor mais leve..</p>
-      </div>
-      <div id="trait2" class="tab-content">
-        <h4 class="trait-title" id="trait-2-title">Determinado</h4>
-        <p class="trait-description" id="trait-2-desc">Não desisto facilmente dos meus objetivos. Quando me proponho a fazer algo, vou até o fim com dedicação e persistência.</p>
-      </div>
-      <div id="trait3" class="tab-content">
-        <h4 class="trait-title" id="trait-3-title">Sociável</h4>
-        <p class="trait-description" id="trait-3-desc">Eu sou uma pessoa que gosta de estar perto dos outros e de me conectar de forma genuína. Tento sempre ouvir com atenção e mostrar interesse pelo que as pessoas têm a dizer. Gosto de fazer com que as conversas fluam de forma leve, e para isso, me esforço em ser agradável e respeitar o espaço de cada um. Acho que ser sociável é sobre ser natural, sem forçar nada, e aproveitar o momento. Quando estou em grupo, tento me adaptar ao clima da conversa e me sentir à vontade, porque acredito que as melhores interações acontecem quando todos estão confortáveis.</p>
-      </div>
-    </section>
-       <section id="dreams" class="section">
-    <h2 class="section-title" id="dreams-title">Meus Sonhos</h2>
-    <div class="content-grid">
-        <div class="content-card">
-            <h3 class="card-title">🌍 Viajar</h3>
-            <div class="card-images">
-                <img src="roma.jfif" alt="Foto de Viagem 1">
-                <img src="roma.jfif" alt="Foto de Viagem 2">
-                <img src="roma.jfif" alt="Foto de Viagem 3">
-            </div>
-            <p class="card-text" id="dream-1">Viajar pelo mundo e conhecer novas culturas</p>
-        </div>
-        <div class="content-card">
-            <h3 class="card-title">🏡 Casa</h3>
-            <div class="card-images">
-                <img src="caminho/casa1.jpg" alt="Foto de Casa 1">
-                <img src="caminho/casa2.jpg" alt="Foto de Casa 2">
-                <img src="caminho/casa3.jpg" alt="Foto de Casa 3">
-            </div>
-            <p class="card-text" id="dream-2">Construir minha casa dos sonhos, bem aconchegante</p>
-        </div>
-        
-        <div class="content-card">
-            <h3 class="card-title">📚 Aprender</h3>
-            <div class="card-images">
-                <img src="caminho/aprender1.jpg" alt="Foto de Aprender 1">
-                <img src="caminho/aprender2.jpg" alt="Foto de Aprender 2">
-                <img src="caminho/aprender3.jpg" alt="Foto de Aprender 3">
-            </div>
-            <p class="card-text" id="dream-3">Aprender novos idiomas e habilidades</p>
-        </div>
-    </div>
-    </section>
-
-    <section id="studies" class="section">
-      <h2 class="section-title" id="studies-title">Meus Estudos</h2>
-      <div class="content-grid">
-        <div class="content-card">
-          <h3 class="card-title">🎓 Formação</h3>
-          <p class="card-text" id="current-study">Cursando Engenharia Mecanica</p>
-        </div>
-        <div class="content-card">
-          <h3 class="card-title">💼 Carreira</h3>
-          <p class="card-text" id="future-career">Desenvolvedor de projetos de carros</p>
-        </div>
-        <div class="content-card">
-          <h3 class="card-title">🚀 Objetivos</h3>
-          <p class="card-text" id="career-goals">Futuramente poder consetar carros e ter minha propria mecanica</p>
-        </div>
-      </div>
-      <div class="simple-content">
-        <p class="simple-text" id="studies-description">
-          Os estudos são a base para alcançar meus objetivos profissionais. Cada dia de aprendizado me aproxima mais do meu sonho de trabalhar com tecnologia.
-        </p>
-      </div>
-    </section>
-
-<section id="friends" class="section">
-    <h2 class="section-title" id="friends-title">Meus Amigos</h2>
-    <div class="simple-content">
-        <p class="simple-text" id="friends-text">
-            Amigos são a família que escolhemos. São aqueles que estão ao nosso lado nos momentos bons e ruins, que nos fazem rir e nos apoiam em nossos sonhos.
-        </p>
-        <div class="friends-image-container">
-            <img src="caminho/para/sua/imagem-dos-amigos.jpg" alt="Foto dos Meus Amigos">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Pessoal</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link rel="stylesheet" href="style.css"> 
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body>
+  <div class="container">
+   <header>
+    <h1 id="site-title">Meu Nome</h1>
+    <nav>
+     <button class="nav-btn active" data-page="about">Sobre Mim</button> 
+     <button class="nav-btn" data-page="course">Meu Curso</button> 
+     <button class="nav-btn" data-page="friends">Meus Amigos</button> 
+     <button class="nav-btn" data-page="family">Minha Família</button> 
+     <button class="nav-btn" data-page="dreams">Meus Sonhos</button>
+    </nav>
+   </header>
+   <main>
+    <div id="about" class="page active">
+     <h2 class="section-title" id="about-title">Sobre Mim</h2>
+     <p class="content-text" id="about-text">Olá! Bem-vindo à minha página pessoal. Aqui você pode conhecer um pouco mais sobre mim, minha jornada, minhas paixões e o que me inspira todos os dias.</p>
+     <div class="photo-grid">
+      <div class="photo-placeholder">
+       <div>
+        <div class="photo-icon">
+         📷
         </div>
+        <div>
+         Sua foto
         </div>
-</section>
-
-    <section id="family" class="section">
-    <h2 class="section-title" id="family-title">Minha Família</h2>
-    <div class="simple-content">
-        <p class="simple-text" id="family-text">
-            A família é meu porto seguro, minha base e meu maior tesouro. São as pessoas que me conhecem de verdade e que sempre estarão presentes.
-        </p>
-        <div class="family-image-container">
-            <img src="caminho/para/sua/imagem-de-familia.jpg" alt="Foto da Minha Família">
+       </div>
+      </div>
+      <div class="photo-placeholder">
+       <div>
+        <div class="photo-icon">
+         🌟
         </div>
+        <div>
+         Momentos especiais
         </div>
-</section>
-  </div> <script src="java.js"></script> 
-</body>
+       </div>
+      </div>
+      <div class="photo-placeholder">
+       <div>
+        <div class="photo-icon">
+         ✨
+        </div>
+        <div>
+         Suas conquistas
+        </div>
+       </div>
+      </div>
+      <div class="photo-placeholder">
+       <div>
+        <div class="photo-icon">
+         💫
+        </div>
+        <div>
+         Suas paixões
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div id="course" class="page">
+     <h2 class="section-title" id="course-title">Meu Curso</h2>
+     <p class="content-text" id="course-text">Estou cursando uma área que me apaixona e que me permite crescer profissionalmente. Aqui compartilho momentos e experiências da minha vida acadêmica.</p>
+     <div class="photo-grid">
+      <div class="photo-placeholder">
+       <div>
+        <div class="photo-icon">
+         📚
+        </div>
+        <div>
+         Foto do curso
+        </div>
+       </div>
+      </div>
+      <div class="photo-placeholder">
+       <div>
+        <div class="photo-icon">
+         🎓
+        </div>
+        <div>
+         Foto da universidade
+        </div>
+       </div>
+      </div>
+      <div class="photo-placeholder">
+       <div>
+        <div class="photo-icon">
+         📖
+        </div>
+        <div>
+         Foto dos estudos
+        </div>
+       </div>
+      </div>
+      <div class="photo-placeholder">
+       <div>
+        <div class="photo-icon">
+         ✏️
+        </div>
+        <div>
+         Projetos acadêmicos
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div id="friends" class="page">
+     <h2 class="section-title" id="friends-title">Meus Amigos</h2>
+     <p class="content-text" id="friends-text">Amigos são a família que escolhemos. Aqui estão as pessoas especiais que fazem parte da minha vida e tornam cada momento mais especial.</p>
+     <div class="photo-grid">
+      <div class="photo-placeholder">
+       <div>
+        <div class="photo-icon">
+         👥
+        </div>
+        <div>
+         Foto com amigos
+        </div>
+       </div>
+      </div>
+      <div class="photo-placeholder">
+       <div>
+        <div class="photo-icon">
+         🎉
+        </div>
+        <div>
+         Momentos especiais
+        </div>
+       </div>
+      </div>
+      <div class="photo-placeholder">
+       <div>
+        <div class="photo-icon">
+         🤝
+        </div>
+        <div>
+         Amizades
+        </div>
+       </div>
+      </div>
+      <div class="photo-placeholder">
+       <div>
+        <div class="photo-icon">
+         😊
+        </div>
+        <div>
+         Bons momentos
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div id="family" class="page">
+     <h2 class="section-title" id="family-title">Minha Família</h2>
+     <p class="content-text" id="family-text">A família é a base de tudo. Aqui compartilho um pouco sobre as pessoas que me apoiam, me inspiram e estão sempre ao meu lado.</p>
+     <div class="photo-grid">
+      <div class="photo-placeholder">
+       <div>
+        <div class="photo-icon">
+         👨‍👩‍👧‍👦
+        </div>
+        <div>
+         Foto da família
+        </div>
+       </div>
+      </div>
+      <div class="photo-placeholder">
+       <div>
+        <div class="photo-icon">
+         ❤️
+        </div>
+        <div>
+         Momentos em família
+        </div>
+       </div>
+      </div>
+      <div class="photo-placeholder">
+       <div>
+        <div class="photo-icon">
+         🏠
+        </div>
+        <div>
+         Reuniões familiares
+        </div>
+       </div>
+      </div>
+      <div class="photo-placeholder">
+       <div>
+        <div class="photo-icon">
+         🎊
+        </div>
+        <div>
+         Celebrações
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div id="dreams" class="page">
+     <h2 class="section-title" id="dreams-title">Meus Sonhos</h2>
+     <p class="content-text" id="dreams-text">Sonhar é essencial para crescer. Aqui compartilho minhas aspirações, objetivos e tudo aquilo que me motiva a seguir em frente todos os dias.</p>
+     <div class="photo-grid">
+      <div class="photo-placeholder">
+       <div>
+        <div class="photo-icon">
+         ⭐
+        </div>
+        <div>
+         Objetivos
+        </div>
+       </div>
+      </div>
+      <div class="photo-placeholder">
+       <div>
+        <div class="photo-icon">
+         🎯
+        </div>
+        <div>
+         Metas
+        </div>
+       </div>
+      </div>
+      <div class="photo-placeholder">
+       <div>
+        <div class="photo-icon">
+         🌟
+        </div>
+        <div>
+         Inspirações
+        </div>
+       </div>
+      </div>
+      <div class="photo-placeholder">
+       <div>
+        <div class="photo-icon">
+         🚀
+        </div>
+        <div>
+         Futuro
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </main>
+  </div>
+  <script src="script.js"></script>
+ </body>
 </html>

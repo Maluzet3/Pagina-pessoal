@@ -1,299 +1,162 @@
-* {
+body {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Inter', 'Segoe UI', sans-serif;
-  background: #fffbf0;
-  color: #2d2d2d;
-  line-height: 1.6;
-  min-height: 100%;
-}
-
-html, body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #FFF9E6;
+  color: #5C4A1F;
   height: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .container {
   max-width: 900px;
   margin: 0 auto;
   padding: 40px 20px;
+  min-height: 100%;
 }
 
-/* Header */
 header {
   text-align: center;
-  padding: 60px 0;
-  border-bottom: 1px solid #f5d700;
-  margin-bottom: 60px;
+  padding: 40px 0;
+  border-bottom: 2px solid #FFD93D;
+  margin-bottom: 40px;
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 64px;
+  margin: 0;
+  color: #5C4A1F;
   font-weight: 300;
-  color: #d4af37;
-  margin-bottom: 10px;
-  letter-spacing: -1px;
+  letter-spacing: 2px;
 }
 
-.subtitle {
-  font-size: 1.2em;
-  color: #8b7355;
-  font-weight: 400;
-}
-
-/* Navegação */
 nav {
   display: flex;
   justify-content: center;
-  gap: 40px;
-  margin: 40px 0 60px 0;
+  gap: 30px;
+  margin-top: 30px;
   flex-wrap: wrap;
 }
 
 .nav-btn {
-  background: none;
-  border: none;
-  color: #8b7355;
-  font-size: 1em;
+  background: transparent;
+  border: 2px solid #FFD93D;
+  color: #5C4A1F;
+  padding: 12px 30px;
+  font-size: 16px;
   cursor: pointer;
-  padding: 10px 0;
-  position: relative;
   transition: all 0.3s ease;
-  font-weight: 400;
+  border-radius: 0;
+  font-family: inherit;
 }
 
-.nav-btn::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: #f5d700;
-  transition: width 0.3s ease;
-}
-
-.nav-btn:hover::after,
-.nav-btn.active::after {
-  width: 100%;
+.nav-btn:hover {
+  background: #FFD93D;
+  transform: translateY(-2px);
 }
 
 .nav-btn.active {
-  color: #d4af37;
+  background: #FFD93D;
+  font-weight: 600;
 }
 
-/* Seções */
-.section {
+.page {
   display: none;
   animation: fadeIn 0.5s ease;
 }
 
-.section.active {
+.page.active {
   display: block;
 }
 
-/* Página principal */
-.hero-section {
-  text-align: center;
-  margin-bottom: 80px;
-}
-
-.profile-photo {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #f5d700 0%, #d4af37 100%);
-  margin: 0 auto 40px auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 4em;
-  color: white;
-  box-shadow: 0 10px 30px rgba(245, 215, 0, 0.2);
-}
-
-/* Abas de personalidade */
-.personality-tabs {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 40px;
-  flex-wrap: wrap;
-}
-
-.tab-btn {
-  background: #fff8dc;
-  border: 2px solid #f5d700;
-  color: #8b7355;
-  padding: 12px 24px;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-size: 0.95em;
-}
-
-.tab-btn:hover,
-.tab-btn.active {
-  background: #f5d700;
-  color: white;
-}
-
-.tab-content {
-  background: white;
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(245, 215, 0, 0.1);
-  text-align: center;
-  display: none;
-}
-
-.tab-content.active {
-  display: block;
-}
-
-/* Cartões */
-.content-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.content-card {
-  background: white;
-  padding: 30px;
-  border-radius: 10px;
-  border-left: 4px solid #f5d700;
-  box-shadow: 0 3px 15px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease;
-}
-
-.content-card:hover {
-  transform: translateY(-5px);
-}
-
-/* Conteúdo simples */
-.simple-content {
-  background: white;
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(245, 215, 0, 0.1);
-  margin-top: 40px;
-  text-align: center;
-}
-
-.simple-text {
-  font-size: 1.1em;
-  color: #666;
-  line-height: 1.8;
-}
-
-/* Animações */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}  
-/* Responsivo */
-@media (max-width: 768px) {
-  h1 { font-size: 2.2em; }
-  .section-title { font-size: 2em; }
-  .profile-photo { width: 150px; height: 150px; font-size: 3em; }
-}
-/* Adicione estas linhas ao seu arquivo style.css */
-body {
-  font-size: 18px; /* Tamanho base maior para leitura geral */
-}
-
-#site-title {
-  font-size: 3.5em; /* Ajuste o valor conforme desejar */
-  font-weight: bold;
-}
-
-.subtitle {
-  font-size: 1.5em; /* Ex: 1.5 vezes o tamanho base */
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .section-title {
-  font-size: 2em;
-}
-/* Estilizando o container da foto (se a imagem for circular ou tiver bordas) */
-.profile-photo {
-    /* Garante que o container se ajuste à imagem */
-    width: fit-content; 
-    height: fit-content;
-    /* Adicione margens se necessário para separá-lo do texto */
-    margin: 0 auto 15px auto; /* Centraliza horizontalmente e adiciona margem inferior */
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #5C4A1F;
+  font-weight: 300;
+  border-left: 4px solid #FFD93D;
+  padding-left: 20px;
 }
 
-/* Estilizando a imagem em si */
-.profile-photo img {
-    /* Define um tamanho pequeno e fixo para a imagem */
-    width: 120px; 
-    height: 120px;
-    /* Garante que a imagem seja exibida como um bloco para o 'margin: auto' funcionar se usado */
-    display: block; 
-    /* Opcional: Para fazer a imagem ficar redonda */
-    border-radius: 50%;
-    /* Garante que a imagem preencha o espaço sem distorcer (cortando se necessário) */
-    object-fit: cover; 
-    /* Opcional: Adiciona uma borda */
-    border: 3px solid #f0f0f0; 
-}/* Estilo para o container das imagens (usa Flexbox para alinhar) */
-.card-images {
-    display: flex; /* Habilita o Flexbox */
-    justify-content: space-between; /* Distribui as imagens uniformemente (opcional) */
-    align-items: center; /* Alinha verticalmente */
-    margin-top: 10px; /* Adiciona um pequeno espaço acima das imagens */
-    margin-bottom: 10px; /* Adiciona um pequeno espaço abaixo das imagens */
-    width: 100%; /* Garante que o container use toda a largura do card */
+.content-text {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  color: #6B5A2E;
 }
 
-/* Estilo para as imagens individuais */
-.card-images img {
-    /* Define a largura de cada imagem para que caibam 3 lado a lado com espaço */
-    /* 33.33% daria 3 imagens perfeitas, mas usamos um pouco menos para a margem entre elas */
-    width: 30%; 
-    height: auto; /* Mantém a proporção da altura automaticamente */
-    
-    /* Opcional: Se quiser que as imagens tenham altura fixa, adicione: */
-    /* height: 80px;
-    object-fit: cover; /* Para preencher o espaço sem distorcer, cortando se necessário */
-    
-    /* Opcional: Borda arredondada suave */
-    border-radius: 8px; 
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
 }
 
-/* Opcional: Para melhorar o visual geral do card */
-.content-card {
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    /* Outros estilos do card... */
-}/* Estilo para a imagem grande da seção Amigos */
-.friends-image-container img {
-    /* Faz a imagem ocupar 100% da largura do seu container */
-    width: 100%; 
-    
-    /* Mantém a proporção da imagem. Essencial! */
-    height: auto; 
-    
-    /* Garante que não haja espaço indesejado abaixo da imagem */
-    display: block; 
-    
-    /* Opcional: Adiciona margem acima/abaixo para separá-la do texto */
-    margin-top: 15px;
-    margin-bottom: 20px;
-}/* Exemplo de classe genérica no CSS */
-.full-width-image {
-    width: 100%; 
-    height: auto; 
-    display: block; 
-    margin-top: 15px;
-    margin-bottom: 20px;
+.photo-placeholder {
+  background: #FFF4CC;
+  border: 2px dashed #FFD93D;
+  aspect-ratio: 4/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #A89158;
+  font-size: 14px;
+  text-align: center;
+  padding: 40px 20px;
+  transition: all 0.3s ease;
+  min-height: 300px;
 }
 
-/* E no HTML, a tag img ficaria assim: */
-<img class="full-width-image" src="caminho/para/sua/imagem-dos-amigos.jpg" alt="Foto dos Meus Amigos">
+.photo-placeholder:hover {
+  background: #FFEBB3;
+  border-color: #FFC700;
+}
+
+.photo-icon {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .content-text {
+    font-size: 16px;
+  }
+
+  nav {
+    gap: 15px;
+  }
+
+  .nav-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .photo-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+  }
+}
