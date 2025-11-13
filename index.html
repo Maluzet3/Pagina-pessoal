@@ -1,120 +1,137 @@
 <!doctype html>
 <html lang="pt-BR">
- <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página Pessoal</title>
-  <script src="/_sdk/element_sdk.js"></script>
-  <link rel="stylesheet" href="style.css"> 
-  <style>@view-transition { navigation: auto; }</style>
-  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
-  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
- </head>
- <body>
-  <div class="container">
-   <header>
-    <h1 id="site-title">Meu Nome</h1>
-    <nav>
-     <button class="nav-btn active" data-page="about">Sobre Mim</button> 
-     <button class="nav-btn" data-page="course">Meu Curso</button> 
-     <button class="nav-btn" data-page="friends">Meus Amigos</button> 
-     <button class="nav-btn" data-page="family">Minha Família</button> 
-     <button class="nav-btn" data-page="dreams">Meus Sonhos</button>
-    </nav>
-   </header>
-   <main>
-    <div id="about" class="page active">
-     <h2 class="section-title" id="about-title">Sobre Mim</h2>
-     <p class="content-text" id="about-text">Olá! Bem-vindo à minha página pessoal. Aqui você pode conhecer um pouco mais sobre mim, minha jornada, minhas paixões e o que me inspira todos os dias.</p>
-     <div class="photo-grid">
-      <div class="photo-placeholder">
-        <img src="foto perfil.enc" alt="Sua foto principal" class="photo-img">
-      </div>
-      <div class="photo-placeholder">
-        <img src="niver.jpg" alt="Momentos especiais" class="photo-img">
-      </div>
-      <div class="photo-placeholder">
-        <img src="kumon.jpg" alt="Suas conquistas" class="photo-img">
-      </div>
-      <div class="photo-placeholder">
-        <img src="paixao.jpg" alt="Suas paixões" class="photo-img">
-      </div>
-     </div>
-    </div>
-    <div id="course" class="page">
-     <h2 class="section-title" id="course-title">Meu Curso</h2>
-     <p class="content-text" id="course-text">Estou cursando uma área que me apaixona e que me permite crescer profissionalmente. Aqui compartilho momentos e experiências da minha vida acadêmica.</p>
-     <div class="photo-grid">
-      <div class="photo-placeholder">
-        <img src="caminho/para/curso-foto.jpg" alt="Foto do curso" class="photo-img">
-      </div>
-      <div class="photo-placeholder">
-        <img src="caminho/para/universidade-foto.jpg" alt="Foto da universidade" class="photo-img">
-      </div>
-      <div class="photo-placeholder">
-        <img src="caminho/para/estudos-foto.jpg" alt="Foto dos estudos" class="photo-img">
-      </div>
-      <div class="photo-placeholder">
-        <img src="caminho/para/projetos-foto.jpg" alt="Projetos acadêmicos" class="photo-img">
-      </div>
-     </div>
-    </div>
-    <div id="friends" class="page">
-     <h2 class="section-title" id="friends-title">Meus Amigos</h2>
-     <p class="content-text" id="friends-text">Amigos são a família que escolhemos. Aqui estão as pessoas especiais que fazem parte da minha vida e tornam cada momento mais especial.</p>
-     <div class="photo-grid">
-      <div class="photo-placeholder">
-        <img src="amigos.jpeg" alt="Foto com amigos" class="photo-img">
-      </div>
-      <div class="photo-placeholder">
-        <img src="caminho/para/amigos-momentos.jpg" alt="Momentos especiais com amigos" class="photo-img">
-      </div>
-      <div class="photo-placeholder">
-        <img src="caminho/para/amizades-foto.jpg" alt="Amizades" class="photo-img">
-      </div>
-      <div class="photo-placeholder">
-        <img src="caminho/para/bons-momentos-foto.jpg" alt="Bons momentos com amigos" class="photo-img">
-      </div>
-     </div>
-    </div>
-    <div id="family" class="page">
-     <h2 class="section-title" id="family-title">Minha Família</h2>
-     <p class="content-text" id="family-text">A família é a base de tudo. Aqui compartilho um pouco sobre as pessoas que me apoiam, me inspiram e estão sempre ao meu lado.</p>
-     <div class="photo-grid">
-      <div class="photo-placeholder">
-        <img src="caminho/para/familia-foto.jpg" alt="Foto da família" class="photo-img">
-      </div>
-      <div class="photo-placeholder">
-        <img src="caminho/para/familia-momentos.jpg" alt="Momentos em família" class="photo-img">
-      </div>
-      <div class="photo-placeholder">
-        <img src="caminho/para/reunioes-familiares.jpg" alt="Reuniões familiares" class="photo-img">
-      </div>
-      <div class="photo-placeholder">
-        <img src="caminho/para/celebracoes-familia.jpg" alt="Celebrações em família" class="photo-img">
-      </div>
-     </div>
-    </div>
-    <div id="dreams" class="page">
-     <h2 class="section-title" id="dreams-title">Meus Sonhos</h2>
-     <p class="content-text" id="dreams-text">Sonhar é essencial para crescer. Aqui compartilho minhas aspirações, objetivos e tudo aquilo que me motiva a seguir em frente todos os dias.</p>
-     <div class="photo-grid">
-      <div class="photo-placeholder">
-        <img src="caminho/para/objetivos-foto.jpg" alt="Objetivos" class="photo-img">
-      </div>
-      <div class="photo-placeholder">
-        <img src="caminho/para/metas-foto.jpg" alt="Metas" class="photo-img">
-      </div>
-      <div class="photo-placeholder">
-        <img src="caminho/para/inspiracoes-foto.jpg" alt="Inspirações" class="photo-img">
-      </div>
-      <div class="photo-placeholder">
-        <img src="caminho/para/futuro-foto.jpg" alt="Futuro" class="photo-img">
-      </div>
-     </div>
-    </div>
-   </main>
-  </div>
-  <script src="java.js"></script>
- </body>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Pessoal</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link rel="stylesheet" href="style.css"> 
+  <style>
+    @view-transition { navigation: auto; }
+    /* NOVOS ESTILOS PARA CENTRALIZAR E AUMENTAR O TÍTULO */
+    header {
+ text-align: center; /* Centraliza o texto no header */
+ padding-top: 20px;
+ padding-bottom: 20px;
+  }
+#site-title {
+ font-size: 3em /* Aumenta o título */
+ margin-bottom: 5px; /* Espaço entre o título e o subtítulo */
+ }
+ .subtitle {
+ font-size: 1.25em;
+ color: var(--text-color, #5C4A1F); /* Usando a cor de texto padrão */
+ margin-bottom: 20px;
+ </style>
+ <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+</head>
+<body>
+ <div class="container">
+<header> <h1 id="site-title">Meu Nome</h1>
+  <p class="subtitle" id="site-subtitle">Corajosa e Chorona</p> 
+ <nav>
+ <button class="nav-btn active" data-page="about">Sobre Mim</button> 
+     <button class="nav-btn" data-page="course">Meu Curso</button> 
+     <button class="nav-btn" data-page="friends">Meus Amigos</button> 
+     <button class="nav-btn" data-page="family">Minha Família</button> 
+     <button class="nav-btn" data-page="dreams">Meus Sonhos</button>
+    </nav>
+   </header>
+   <main>
+    <div id="about" class="page active">
+     <h2 class="section-title" id="about-title">Sobre Mim</h2>
+     <p class="content-text" id="about-text">Olá! Bem-vindo à minha página pessoal. Aqui você pode conhecer um pouco mais sobre mim, minha jornada, minhas paixões e o que me inspira todos os dias.</p>
+     <div class="photo-grid">
+      <div class="photo-placeholder">
+        <img src="foto perfil.enc" alt="Sua foto principal" class="photo-img">
+      </div>
+      <div class="photo-placeholder">
+        <img src="niver.jpg" alt="Momentos especiais" class="photo-img">
+      </div>
+      <div class="photo-placeholder">
+        <img src="kumon.jpg" alt="Suas conquistas" class="photo-img">
+      </div>
+      <div class="photo-placeholder">
+        <img src="paixao.jpg" alt="Suas paixões" class="photo-img">
+      </div>
+     </div>
+    </div>
+    <div id="course" class="page">
+     <h2 class="section-title" id="course-title">Meu Curso</h2>
+     <p class="content-text" id="course-text">Estou cursando uma área que me apaixona e que me permite crescer profissionalmente. Aqui compartilho momentos e experiências da minha vida acadêmica.</p>
+     <div class="photo-grid">
+      <div class="photo-placeholder">
+        <img src="caminho/para/curso-foto.jpg" alt="Foto do curso" class="photo-img">
+      </div>
+      <div class="photo-placeholder">
+        <img src="caminho/para/universidade-foto.jpg" alt="Foto da universidade" class="photo-img">
+      </div>
+      <div class="photo-placeholder">
+        <img src="caminho/para/estudos-foto.jpg" alt="Foto dos estudos" class="photo-img">
+      </div>
+      <div class="photo-placeholder">
+        <img src="caminho/para/projetos-foto.jpg" alt="Projetos acadêmicos" class="photo-img">
+      </div>
+     </div>
+    </div>
+    <div id="friends" class="page">
+     <h2 class="section-title" id="friends-title">Meus Amigos</h2>
+     <p class="content-text" id="friends-text">Amigos são a família que escolhemos. Aqui estão as pessoas especiais que fazem parte da minha vida e tornam cada momento mais especial.</p>
+     <div class="photo-grid">
+      <div class="photo-placeholder">
+        <img src="amigos.jpeg" alt="Foto com amigos" class="photo-img">
+      </div>
+      <div class="photo-placeholder">
+        <img src="caminho/para/amigos-momentos.jpg" alt="Momentos especiais com amigos" class="photo-img">
+      </div>
+      <div class="photo-placeholder">
+        <img src="caminho/para/amizades-foto.jpg" alt="Amizades" class="photo-img">
+      </div>
+      <div class="photo-placeholder">
+        <img src="caminho/para/bons-momentos-foto.jpg" alt="Bons momentos com amigos" class="photo-img">
+      </div>
+     </div>
+    </div>
+    <div id="family" class="page">
+     <h2 class="section-title" id="family-title">Minha Família</h2>
+     <p class="content-text" id="family-text">A família é a base de tudo. Aqui compartilho um pouco sobre as pessoas que me apoiam, me inspiram e estão sempre ao meu lado.</p>
+     <div class="photo-grid">
+      <div class="photo-placeholder">
+        <img src="caminho/para/familia-foto.jpg" alt="Foto da família" class="photo-img">
+      </div>
+      <div class="photo-placeholder">
+        <img src="caminho/para/familia-momentos.jpg" alt="Momentos em família" class="photo-img">
+      </div>
+      <div class="photo-placeholder">
+        <img src="caminho/para/reunioes-familiares.jpg" alt="Reuniões familiares" class="photo-img">
+      </div>
+      <div class="photo-placeholder">
+        <img src="caminho/para/celebracoes-familia.jpg" alt="Celebrações em família" class="photo-img">
+      </div>
+     </div>
+    </div>
+    <div id="dreams" class="page">
+     <h2 class="section-title" id="dreams-title">Meus Sonhos</h2>
+     <p class="content-text" id="dreams-text">Sonhar é essencial para crescer. Aqui compartilho minhas aspirações, objetivos e tudo aquilo que me motiva a seguir em frente todos os dias.</p>
+     <div class="photo-grid">
+      <div class="photo-placeholder">
+        <img src="caminho/para/objetivos-foto.jpg" alt="Objetivos" class="photo-img">
+      </div>
+      <div class="photo-placeholder">
+        <img src="caminho/para/metas-foto.jpg" alt="Metas" class="photo-img">
+      </div>
+      <div class="photo-placeholder">
+        <img src="caminho/para/inspiracoes-foto.jpg" alt="Inspirações" class="photo-img">
+      </div>
+      <div class="photo-placeholder">
+        <img src="caminho/para/futuro-foto.jpg" alt="Futuro" class="photo-img">
+      </div>
+     </div>
+    </div>
+   </main>
+  </div>
+  <script src="java.js"></script>
+ </body>
 </html>
+ }
