@@ -304,4 +304,15 @@ function closeChildhoodAlbum() {
             btn.style.color = primaryColor;
         }
     });
-}
+}// AJUSTE NA LÓGICA DE NAVEGAÇÃO EXISTENTE
+
+navButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // ... (resto do código)
+
+        // Esconde o álbum de infância (se estiver aberto) antes de mudar de página
+        document.getElementById('childhood-album').classList.remove('active');
+        
+        // ... (resto do código)
+    });
+});
