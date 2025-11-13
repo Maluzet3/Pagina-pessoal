@@ -292,4 +292,64 @@ body {
         grid-column: span 1;
         aspect-ratio: 16/9;
     }
+}/* ... (Seu CSS anterior) ... */
+
+/* NOVO GRID PARA FOTOS */
+.photo-grid-new {
+    display: grid;
+    /* Define colunas responsivas, 2 colunas no padrão, mas se adapta */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
+    gap: 15px;
+    grid-column: 1 / -1;
+}
+
+.photo-card {
+    background: #FFF4A3; /* Um amarelo um pouco mais forte para o card */
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.photo-img {
+    width: 100%;
+    height: 100%; /* Garante que a imagem preencha o card */
+    object-fit: cover; /* Recorta a imagem para cobrir o espaço, sem distorcer */
+    display: block;
+    aspect-ratio: 1/1; /* <-- Mudança Importante: Fotos quadradas (ou 4/3, 16/9) */
+}
+/* ... (O resto do seu CSS) ... */
+
+/* Sobrescrevendo para a seção 'Sobre Mim' em telas maiores para 4 colunas */
+@media (min-width: 768px) {
+    /* ... (Seu media query para telas maiores) ... */
+
+    #about .photo-grid-new {
+        grid-template-columns: repeat(4, 1fr); /* 4 colunas para a galeria principal */
+    }
+    
+    /* Remove a regra para wide-card na seção "About" se você quiser todas iguais */
+    #about .wide-card { /* Esta regra não será mais aplicada se você remover 'wide-card' do HTML */
+        grid-column: span 1; /* Garante que se comporta como um card normal */
+        aspect-ratio: 1/1; /* Ou 4/3, 16/9, o que preferir */
+    }
+}
+
+@media (max-width: 600px) {
+    /* ... (Seu media query para mobile) ... */
+
+    .photo-grid-new {
+        grid-template-columns: 1fr; /* Coluna única em mobile */
+    }
+    
+    .wide-card { /* Esta regra não será mais aplicada se você remover 'wide-card' do HTML */
+        grid-column: span 1;
+        aspect-ratio: 1/1; /* Ou 4/3, 16/9, o que preferir */
+    }
 }
