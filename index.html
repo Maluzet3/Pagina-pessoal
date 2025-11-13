@@ -40,12 +40,200 @@
                 <button class="nav-btn" data-page="dreams">Meus Sonhos</button>
             </nav>
         </header>
+       <!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Pessoal - Meu Portfólio</title>
+    <script src="/_sdk/element_sdk.js"></script>
+    <link rel="stylesheet" href="style.css"> 
+    <style>@view-transition { navigation: auto; }</style>
+    <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="modern-container">
+        <header class="profile-header">
+            <h1 id="site-title">Malu Girelli</h1>
+            <p class="subtitle" id="site-subtitle">Corajosa e Chorona</p>
+            
+            
+            <div class="social-links">
+                <a href="https://www.instagram.com/malu.girelli?igsh=MjJreWtnc3JtaHpz" target="_blank" class="social-icon" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/qr/3U5O6Q4ARMHDJ1" target="_blank" class="social-icon" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="AQUI_VAI_O_LINK_DO_SEU_LINKEDIN" target="_blank" class="social-icon" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/Maluzet3" target="_blank" class="social-icon" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        
+            <nav class="nav-menu">
+                <button class="nav-btn active" data-page="about">Sobre Mim</button> 
+                <button class="nav-btn" data-page="course">Meu Curso</button> 
+                <button class="nav-btn" data-page="friends">Meus Amigos</button> 
+                <button class="nav-btn" data-page="family">Minha Família</button> 
+                <button class="nav-btn" data-page="dreams">Meus Sonhos</button>
+            </nav>
+        </header>
         
       <main class="content-wrapper">
             
                         <div id="about" class="page active grid-layout">
                 <h2 class="section-title" id="about-title">Sobre Mim</h2>
                 <div class="text-content">
+                    <p class="content-text" id="about-text">Olá! Bem-vindo à minha página pessoal. Aqui você pode conhecer um pouco mais sobre mim, minha jornada, minhas paixões e o que me inspira todos os dias.</p>
+                </div>
+                <div class="photo-grid-new">
+                                        <div class="photo-card" id="main-photo-card" ondblclick="openChildhoodAlbum()"> 
+                        <img src="eu.jpg" alt="Sua foto principal" class="photo-img">
+                        <div class="photo-caption">Foto Principal (Clique Duas Vezes!)</div>
+                    </div>
+                    <div class="photo-card">
+                        <img src="niver.jpg" alt="Momentos especiais" class="photo-img">
+                        <div class="photo-caption">Momentos Especiais</div>
+                    </div>
+                    <div class="photo-card">
+                        <img src="medalha.jpg" alt="Suas conquistas" class="photo-img">
+                        <div class="photo-caption">Conquistas</div>
+                    </div>
+                    <div class="photo-card">
+                        <img src="cafe.jpg" alt="Suas paixões" class="photo-img">
+                        <div class="photo-caption">Paixões</div>
+                    </div>
+                </div>
+            </div>
+            
+                        <div id="childhood-album" class="page grid-layout">
+                <h2 class="section-title">👶 Álbum de Infância</h2>
+                <div class="text-content">
+                    <p class="content-text">Uma viagem no tempo! Arraste para a direita ou clique no botão "Sobre Mim" para voltar à página principal.</p>
+                    <button class="nav-btn" onclick="closeChildhoodAlbum()" style="margin-bottom: 20px;">Voltar para Sobre Mim</button>
+                </div>
+                <div class="photo-grid-new">
+                    <div class="photo-card"><img src="caminho/infancia_01.jpg" alt="Infância 1" class="photo-img"><div class="photo-caption">Lembrança 1</div></div>
+                    <div class="photo-card"><img src="caminho/infancia_02.jpg" alt="Infância 2" class="photo-img"><div class="photo-caption">Lembrança 2</div></div>
+                    <div class="photo-card"><img src="caminho/infancia_03.jpg" alt="Infância 3" class="photo-img"><div class="photo-caption">Lembrança 3</div></div>
+                    <div class="photo-card"><img src="caminho/infancia_04.jpg" alt="Infância 4" class="photo-img"><div class="photo-caption">Lembrança 4</div></div>
+                    <div class="photo-card"><img src="caminho/infancia_05.jpg" alt="Infância 5" class="photo-img"><div class="photo-caption">Lembrança 5</div></div>
+                    <div class="photo-card"><img src="caminho/infancia_06.jpg" alt="Infância 6" class="photo-img"><div class="photo-caption">Lembrança 6</div></div>
+                    <div class="photo-card"><img src="caminho/infancia_07.jpg" alt="Infância 7" class="photo-img"><div class="photo-caption">Lembrança 7</div></div>
+                    <div class="photo-card"><img src="caminho/infancia_08.jpg" alt="Infância 8" class="photo-img"><div class="photo-caption">Lembrança 8</div></div>
+                    <div class="photo-card"><img src="caminho/infancia_09.jpg" alt="Infância 9" class="photo-img"><div class="photo-caption">Lembrança 9</div></div>
+                    <div class="photo-card"><img src="caminho/infancia_10.jpg" alt="Infância 10" class="photo-img"><div class="photo-caption">Lembrança 10</div></div>
+                </div>
+            </div>
+            
+                        <div id="course" class="page grid-layout"> 
+                <h2 class="section-title" id="course-title">Meu Curso</h2>
+                <div class="text-content">
+                    <p class="content-text" id="course-text">
+                        Como aluna do 2°CDS de Desenvolvimento de Sistemas, foco na criação de soluções eficientes para plataformas Web, Mobile e Desktop. Meu aprendizado abrange da análise de necessidades à codificação e implementação de softwares
+                    </p>
+                </div>
+                <div class="photo-grid-new">
+                    <div class="photo-card">
+                        <img src="caminho/para/curso-foto.jpg" alt="Foto do curso" class="photo-img">
+                        <div class="photo-caption">Estudos</div>
+                    </div>
+                    <div class="photo-card">
+                        <img src="turmacds.jpg" alt="Foto da universidade" class="photo-img">
+                        <div class="photo-caption">Minha turma</div>
+                    </div>
+                    <div class="photo-card">
+                        <img src="passeioCDS.jpg" alt="Foto dos estudos" class="photo-img">
+                        <div class="photo-caption">Passeios</div>
+                    </div>
+                    <div class="photo-card">
+                        <img src="feira.jpg" alt="Projetos acadêmicos" class="photo-img">
+                        <div class="photo-caption">Feira de Profissões</div>
+                    </div>
+                </div>
+            </div>
+            
+                        <div id="friends" class="page grid-layout">
+                <h2 class="section-title" id="friends-title">Meus Amigos</h2>
+                <div class="text-content">
+                    <p class="content-text" id="friends-text">Amigos são a família que escolhemos. Aqui estão as pessoas especiais que fazem parte da minha vida e tornam cada momento mais especial.</p>
+                </div>
+                <div class="photo-grid-new">
+                    <div class="photo-card">
+                        <img src="amigos.jpeg" alt="Foto com amigos" class="photo-img">
+                        <div class="photo-caption">Com os Amigos</div>
+                    </div>
+                    <div class="photo-card">
+                        <img src="niverpt2.jpg" alt="Momentos especiais com amigos" class="photo-img">
+                        <div class="photo-caption">Risadas</div>
+                    </div>
+                    <div class="photo-card">
+                        <img src="gabi.jpg" alt="Amizades" class="photo-img">
+                    </div>
+                    <div class="photo-card">
+                        <img src="tlc.jpg" alt="Bons momentos com amigos" class="photo-img">
+                        <div class="photo-caption">Boas Lembranças</div>
+                    </div>
+                </div>
+            </div>
+            
+                        <div id="family" class="page grid-layout">
+                <h2 class="section-title" id="family-title">Minha Família</h2>
+                <div class="text-content">
+                    <p class="content-text" id="family-text">A família é a base de tudo. Aqui compartilho um pouco sobre as pessoas que me apoiam, me inspiram e estão sempre ao meu lado.</p>
+                </div>
+                <div class="photo-grid-new">
+                    <div class="photo-card">
+                        <img src="family.jpg" alt="Foto da família" class="photo-img">
+                        <div class="photo-caption">Minha Base</div>
+                    </div>
+                    <div class="photo-card">
+                        <img src="pedro.jpg" alt="Momentos em família" class="photo-img">
+                        <div class="photo-caption">União</div>
+                    </div>
+                    <div class="photo-card">
+                        <img src="nivervo.jpg" alt="Reuniões familiares" class="photo-img">
+                        <div class="photo-caption">Celebrações</div>
+                    </div>
+                    <div class="photo-card">
+                        <img src="caminho/para/celebracoes-familia.jpg" alt="Celebrações em família" class="photo-img">
+                    </div>
+                </div>
+            </div>
+            
+                        <div id="dreams" class="page grid-layout">
+                <h2 class="section-title" id="dreams-title">Meus Sonhos</h2>
+                <div class="text-content">
+                    <p class="content-text" id="dreams-text">Sonhar é essencial para crescer. Aqui compartilho minhas aspirações, objetivos e tudo aquilo que me motiva a seguir em frente todos os dias.</p>
+                </div>
+                <div class="photo-grid-new">
+                    <div class="photo-card">
+                        <img src="engmac.jpg" alt="Objetivos" class="photo-img">
+                        <div class="photo-caption">Objetivo</div>
+                    </div>
+                    <div class="photo-card">
+                        <img src="casamnto.jpg" alt="Metas" class="photo-img">
+                        <div class="photo-caption">Plano</div>
+                    </div>
+                    <div class="photo-card">
+                        <img src="caminho/para/inspiracoes-foto.jpg" alt="Inspirações" class="photo-img">
+                        <div class="photo-caption">Inspiração</div>
+                    </div>
+                    <div class="photo-card">
+                        <img src="casa.jpg" alt="Futuro" class="photo-img">
+                        <div class="photo-caption">Futuro</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="java.js"></script>
+</body>
+</html>ontent">
                     <p class="content-text" id="about-text">Olá! Bem-vindo à minha página pessoal. Aqui você pode conhecer um pouco mais sobre mim, minha jornada, minhas paixões e o que me inspira todos os dias.</p>
                 </div>
                 <div class="photo-grid-new">
