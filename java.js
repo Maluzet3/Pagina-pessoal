@@ -1,8 +1,8 @@
 const defaultConfig = {
-    background_color: '#f7f7f7',
-    accent_color: '#FF5733',
-    primary_color: '#2c3e50', // Nova variável para cor principal do texto
-    secondary_color: '#7f8c8d', // Nova variável para cor secundária do texto
+    background_color: '#FFFBE0', // Amarelo palha
+    accent_color: '#FFC72C', // Amarelo dourado
+    primary_color: '#7F6000', // Marrom escuro
+    secondary_color: '#AF9B6A', // Marrom claro
     font_family: 'Segoe UI',
     font_size: 16,
     site_title: 'Malu Girelli',
@@ -25,7 +25,7 @@ async function onConfigChange(config) {
     
     const root = document.documentElement;
 
-    // Aplica as variáveis CSS
+    // Aplica as variáveis CSS (Cores Amarelas)
     root.style.setProperty('--background-color', config.background_color || defaultConfig.background_color);
     root.style.setProperty('--accent-color', config.accent_color || defaultConfig.accent_color);
     root.style.setProperty('--primary-color', config.primary_color || defaultConfig.primary_color);
@@ -36,11 +36,11 @@ async function onConfigChange(config) {
     
     // Títulos e Textos
     const h1 = document.querySelector('h1');
-    h1.style.fontSize = `${baseSize * 2.2}px`; // Ajustado para o novo design
+    h1.style.fontSize = `${baseSize * 2.2}px`;
 
     const sectionTitles = document.querySelectorAll('.section-title');
     sectionTitles.forEach(title => {
-        title.style.fontSize = `${baseSize * 1.8}px`; // Ajustado para o novo design
+        title.style.fontSize = `${baseSize * 1.8}px`;
     });
 
     const contentTexts = document.querySelectorAll('.content-text');
@@ -50,15 +50,18 @@ async function onConfigChange(config) {
     
     // Botões de Navegação
     const navBtns = document.querySelectorAll('.nav-btn');
+    const primaryColor = config.primary_color || defaultConfig.primary_color;
+    const accentColor = config.accent_color || defaultConfig.accent_color;
+
     navBtns.forEach(btn => {
         btn.style.fontSize = `${baseSize * 0.9}px`;
         // Atualiza a cor de fundo do botão ativo ao mudar a cor de destaque
         if (btn.classList.contains('active')) {
-            btn.style.background = config.accent_color || defaultConfig.accent_color;
-            btn.style.borderColor = config.accent_color || defaultConfig.accent_color;
-            btn.style.color = '#ffffff'; // Cor do texto do botão ativo
+            btn.style.background = accentColor;
+            btn.style.borderColor = accentColor;
+            btn.style.color = primaryColor; // Mantém texto escuro
         } else {
-            btn.style.color = config.primary_color || defaultConfig.primary_color;
+            btn.style.color = primaryColor;
         }
     });
     
@@ -104,7 +107,7 @@ function mapToCapabilities(config) {
                 get: () => config.secondary_color || defaultConfig.secondary_color,
                 set: (value) => {
                     config.secondary_color = value;
-                    window.elementSdk.setConfig({ secondary_text_color: value }); // Mantendo secondary_text_color para compatibilidade com o painel original
+                    window.elementSdk.setConfig({ secondary_text_color: value });
                 }
             }
         ],
@@ -175,7 +178,7 @@ navButtons.forEach(button => {
         button.classList.add('active');
         button.style.background = accentColor;
         button.style.borderColor = accentColor;
-        button.style.color = '#ffffff';
+        button.style.color = primaryColor;
         
         // Esconde todas as páginas
         pages.forEach(page => {
