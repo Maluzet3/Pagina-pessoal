@@ -191,8 +191,8 @@ navButtons.forEach(button => {
 });// ... (Seu código JavaScript anterior) ...
 
 // Lógica de Navegação da Página (Mostrar/Esconder Seções)
-const navButtons = document.querySelectorAll('.nav-btn');
-const pages = document.querySelectorAll('.page');
+// const navButtons  document.querySelectorAll('.nav-btn');
+// const  pages document.querySelectorAll('.page');
 
 // ------------------------------------------------------------------
 // NOVAS FUNÇÕES PARA O ÁLBUM DE INFÂNCIA
