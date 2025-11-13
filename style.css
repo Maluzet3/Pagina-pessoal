@@ -157,7 +157,17 @@ body {
 .text-content {
     grid-column: 1 / -1;
 }
+/* ... (Dentro do seu style.css) ... */
 
+.photo-img {
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ display: block;
+ aspect-ratio: 1/1; /* <-- Mantido: Proporção quadrada para uniformidade */
+}
+
+/* ... (Resto do seu CSS) ... */
 .content-text {
     font-size: 1.1em;
     line-height: 1.6;

@@ -188,4 +188,98 @@ navButtons.forEach(button => {
         // Mostra a página alvo
         document.getElementById(targetPage).classList.add('active');
     });
+});// ... (Seu código JavaScript anterior) ...
+
+// Lógica de Navegação da Página (Mostrar/Esconder Seções)
+const navButtons = document.querySelectorAll('.nav-btn');
+const pages = document.querySelectorAll('.page');
+
+// ------------------------------------------------------------------
+// NOVAS FUNÇÕES PARA O ÁLBUM DE INFÂNCIA
+// ------------------------------------------------------------------
+
+function openChildhoodAlbum() {
+    // 1. Esconde todas as páginas ativas
+    pages.forEach(page => {
+        page.classList.remove('active');
+    });
+
+    // 2. Mostra o álbum de infância
+    document.getElementById('childhood-album').classList.add('active');
+
+    // 3. Desativa botões de navegação para focar no álbum
+    navButtons.forEach(btn => {
+        btn.classList.remove('active');
+        // Mantém a cor original do botão 'Sobre Mim'
+        if (btn.getAttribute('data-page') === 'about') {
+             const config = window.elementSdk ? window.elementSdk.config : defaultConfig;
+             const primaryColor = config.primary_color || defaultConfig.primary_color;
+             const secondaryColor = config.secondary_color || defaultConfig.secondary_color;
+
+             btn.style.background = 'transparent';
+             btn.style.color = primaryColor;
+             btn.style.borderColor = secondaryColor;
+        }
+    });
+}
+
+function closeChildhoodAlbum() {
+    // 1. Esconde o álbum
+    document.getElementById('childhood-album').classList.remove('active');
+
+    // 2. Mostra a página "Sobre Mim"
+    document.getElementById('about').classList.add('active');
+
+    // 3. Ativa o botão "Sobre Mim" na navegação
+    navButtons.forEach(btn => {
+        if (btn.getAttribute('data-page') === 'about') {
+            const config = window.elementSdk ? window.elementSdk.config : defaultConfig;
+            const accentColor = config.accent_color || defaultConfig.accent_color;
+            const primaryColor = config.primary_color || defaultConfig.primary_color;
+
+            btn.classList.add('active');
+            btn.style.background = accentColor;
+            btn.style.borderColor = accentColor;
+            btn.style.color = primaryColor;
+        }
+    });
+}
+
+
+// ------------------------------------------------------------------
+// AJUSTE NA LÓGICA DE NAVEGAÇÃO EXISTENTE
+// ------------------------------------------------------------------
+
+navButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const targetPage = button.getAttribute('data-page');
+        const config = window.elementSdk ? window.elementSdk.config : defaultConfig;
+        const accentColor = config.accent_color || defaultConfig.accent_color;
+        const primaryColor = config.primary_color || defaultConfig.primary_color;
+        
+        // Esconde o álbum de infância (se estiver aberto) antes de mudar de página
+        document.getElementById('childhood-album').classList.remove('active');
+        
+        // Remove 'active' de todos os botões e reseta o estilo
+        navButtons.forEach(btn => {
+            btn.classList.remove('active');
+            btn.style.background = 'transparent';
+            btn.style.color = primaryColor;
+            btn.style.borderColor = config.secondary_color || defaultConfig.secondary_color;
+        });
+
+        // Adiciona 'active' ao botão clicado e define o estilo de destaque
+        button.classList.add('active');
+        button.style.background = accentColor;
+        button.style.borderColor = accentColor;
+        button.style.color = primaryColor;
+        
+        // Esconde todas as páginas (incluindo o álbum)
+        pages.forEach(page => {
+            page.classList.remove('active');
+        });
+        
+        // Mostra a página alvo
+        document.getElementById(targetPage).classList.add('active');
+    });
 });

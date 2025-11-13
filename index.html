@@ -48,8 +48,9 @@
                     <p class="content-text" id="about-text">Olá! Bem-vindo à minha página pessoal. Aqui você pode conhecer um pouco mais sobre mim, minha jornada, minhas paixões e o que me inspira todos os dias.</p>
                 </div>
                 <div class="photo-grid-new">
-                    <div class="photo-card"> <img src="eu.jpg" alt="Sua foto principal" class="photo-img">
-                        <div class="photo-caption">Foto Principal</div>
+                    <div class="photo-card" id="main-photo-card" ondblclick="openChildhoodAlbum()"> 
+                        <img src="eu.jpg" alt="Sua foto principal" class="photo-img">
+                        <div class="photo-caption">Foto Principal (Clique Duas Vezes!)</div>
                     </div>
                     <div class="photo-card">
                         <img src="niver.jpg" alt="Momentos especiais" class="photo-img">
@@ -65,6 +66,30 @@
                     </div>
                 </div>
             </div>
+            
+            <div id="childhood-album" class="page grid-layout">
+                <h2 class="section-title">👶 Álbum de Infância</h2>
+                <div class="text-content">
+                    <p class="content-text">Uma viagem no tempo! Arraste para a direita ou clique no botão "Sobre Mim" para voltar à página principal.</p>
+                    <button class="nav-btn" onclick="closeChildhoodAlbum()" style="margin-bottom: 20px;">Voltar para Sobre Mim</button>
+                </div>
+                <div class="photo-grid-new">
+                    <div class="photo-card"><img src="caminho/infancia_01.jpg" alt="Infância 1" class="photo-img"><div class="photo-caption">Lembrança 1</div></div>
+                    <div class="photo-card"><img src="caminho/infancia_02.jpg" alt="Infância 2" class="photo-img"><div class="photo-caption">Lembrança 2</div></div>
+                    <div class="photo-card"><img src="caminho/infancia_03.jpg" alt="Infância 3" class="photo-img"><div class="photo-caption">Lembrança 3</div></div>
+                    <div class="photo-card"><img src="caminho/infancia_04.jpg" alt="Infância 4" class="photo-img"><div class="photo-caption">Lembrança 4</div></div>
+                    <div class="photo-card"><img src="caminho/infancia_05.jpg" alt="Infância 5" class="photo-img"><div class="photo-caption">Lembrança 5</div></div>
+                    <div class="photo-card"><img src="caminho/infancia_06.jpg" alt="Infância 6" class="photo-img"><div class="photo-caption">Lembrança 6</div></div>
+                    <div class="photo-card"><img src="caminho/infancia_07.jpg" alt="Infância 7" class="photo-img"><div class="photo-caption">Lembrança 7</div></div>
+                    <div class="photo-card"><img src="caminho/infancia_08.jpg" alt="Infância 8" class="photo-img"><div class="photo-caption">Lembrança 8</div></div>
+                    <div class="photo-card"><img src="caminho/infancia_09.jpg" alt="Infância 9" class="photo-img"><div class="photo-caption">Lembrança 9</div></div>
+                    <div class="photo-card"><img src="caminho/infancia_10.jpg" alt="Infância 10" class="photo-img"><div class="photo-caption">Lembrança 10</div></div>
+                </div>
+            </div>
+
+            <div id="course" class="page grid-layout"> 
+                </div>
+            </main>
             <div id="course" class="page grid-layout">
     <h2 class="section-title" id="course-title">Meu Curso</h2>
     <div class="text-content">
