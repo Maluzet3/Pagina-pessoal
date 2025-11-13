@@ -282,4 +282,26 @@ navButtons.forEach(button => {
         // Mostra a página alvo
         document.getElementById(targetPage).classList.add('active');
     });
-});
+});// ... (Dentro do seu java.js)
+
+function closeChildhoodAlbum() {
+    // 1. Esconde o álbum
+    document.getElementById('childhood-album').classList.remove('active');
+
+    // 2. Mostra a página "Sobre Mim"
+    document.getElementById('about').classList.add('active');
+
+    // 3. Ativa o botão "Sobre Mim" na navegação
+    navButtons.forEach(btn => {
+        if (btn.getAttribute('data-page') === 'about') {
+            const config = window.elementSdk ? window.elementSdk.config : defaultConfig;
+            const accentColor = config.accent_color || defaultConfig.accent_color;
+            const primaryColor = config.primary_color || defaultConfig.primary_color;
+
+            btn.classList.add('active');
+            btn.style.background = accentColor;
+            btn.style.borderColor = accentColor;
+            btn.style.color = primaryColor;
+        }
+    });
+}
