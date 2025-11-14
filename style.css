@@ -756,11 +756,745 @@ body {
 
 
 
-/* 3. Estilo para o botão ativo (para destacar qual página está aberta) */
+/* 3. Estroot {
+
+    /* Variáveis CSS para fácil customização via JS ou manualmente */
+
+    --background-color: #FFFBE0; /* Amarelo palha muito claro */
+
+    --accent-color: #FFC72C; /* Amarelo dourado vibrante */
+
+    --primary-color: #f1c943; /* Marrom escuro/Dourado escuro para texto */
+
+    --secondary-color: #8b711a; /* Marrom claro/Bronze para texto secundário */
+
+    --header-bg: #ffffff; /* Fundo branco para o cabeçalho (mantendo a clareza) */
+
+    --border-radius: 10px;
+
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+}
+
+
+
+body {
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    background: var(--background-color);
+
+    color: var(--primary-color);
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+
+}
+
+
+
+* {
+
+    box-sizing: border-box;
+
+}
+
+
+
+.modern-container {
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 20px;
+
+    background: var(--header-bg);
+
+    border-radius: var(--border-radius);
+
+    box-shadow: var(--shadow);
+
+    margin-top: 30px;
+
+    margin-bottom: 30px;
+
+}
+
+
+
+/* HEADER - Perfil e Navegação */
+
+.profile-header {
+
+    text-align: center;
+
+    padding: 30px 0 20px 0;
+
+    border-bottom: 1px solid var(--secondary-color);
+
+    margin-bottom: 20px;
+
+}
+
+
+
+#site-title {
+
+    font-size: 3.5em;
+
+    margin: 0;
+
+    color: var(--primary-color);
+
+    font-weight: 700;
+
+    letter-spacing: -1px;
+
+}
+
+
+
+.subtitle {
+
+    margin-top: 5px;
+
+    margin-bottom: 25px;
+
+    font-size: 1.2em;
+
+    font-weight: 300;
+
+    color: var(--secondary-color);
+
+}
+
+
+
+/* LINKS DE REDES SOCIAIS */
+
+.social-links {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    margin-bottom: 25px;
+
+}
+
+
+
+.social-icon {
+
+    font-size: 1.5em;
+
+    color: var(--secondary-color);
+
+    transition: color 0.3s ease, transform 0.3s ease;
+
+}
+
+
+
+.social-icon:hover {
+
+    color: var(--accent-color);
+
+    transform: translateY(-3px) scale(1.1);
+
+}
+
+/* FIM LINKS DE REDES SOCIAIS */
+
+
+
+.nav-menu {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    padding-top: 15px;
+
+}
+
+
+
+.nav-btn {
+
+    background: transparent;
+
+    border: 1px solid var(--secondary-color);
+
+    color: var(--primary-color);
+
+    padding: 8px 20px;
+
+    font-size: 1em;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    border-radius: 50px;
+
+    font-family: inherit;
+
+}
+
+
+
+.nav-btn:hover {
+
+    background: var(--accent-color);
+
+    border-color: var(--accent-color);
+
+    color: var(--primary-color); /* Mantém o texto escuro no hover para contraste */
+
+    transform: translateY(-1px);
+
+}
+
+
 
 .nav-btn.active {
 
-    /* O JavaScript já aplica algumas cores, mas o CSS é mais robusto */
+    background: var(--accent-color);
+
+    border-color: var(--accent-color);
+
+    color: var(--primary-color); /* Texto escuro no botão ativo */
+
+    font-weight: 600;
+
+}
+
+
+
+/* CONTEÚDO PRINCIPAL (MAIN) */
+
+.content-wrapper {
+
+    padding: 20px 0;
+
+}
+
+
+
+.page {
+
+    display: none;
+
+    animation: fadeIn 0.5s ease;
+
+}
+
+
+
+.page.active {
+
+    display: block;
+
+}
+
+
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(10px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+
+.grid-layout {
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+
+}
+
+
+
+.section-title {
+
+    font-size: 2.5em;
+
+    margin-bottom: 20px;
+
+    color: var(--primary-color);
+
+    font-weight: 300;
+
+    border-left: 5px solid var(--accent-color);
+
+    padding-left: 20px;
+
+    grid-column: 1 / -1;
+
+}
+
+
+
+.text-content {
+
+    grid-column: 1 / -1;
+
+}
+
+/* ... (Dentro do seu style.css) ... */
+
+
+
+.photo-img {
+
+ width: 100%;
+
+ height: 100%;
+
+ object-fit: cover;
+
+ display: block;
+
+ aspect-ratio: 1/1; /* <-- Mantido: Proporção quadrada para uniformidade */
+
+}
+
+
+
+/* ... (Resto do seu CSS) ... */
+
+.content-text {
+
+    font-size: 1.1em;
+
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+
+    color: var(--secondary-color);
+
+    padding: 0 5px;
+
+}
+
+
+
+/* NOVO GRID PARA FOTOS */
+
+.photo-grid-new {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+
+    grid-column: 1 / -1;
+
+}
+
+
+
+.photo-card {
+
+    background: #FFF4A3; /* Um amarelo um pouco mais forte para o card */
+
+    border-radius: var(--border-radius);
+
+    overflow: hidden;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    position: relative;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+
+
+.photo-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais escura para destacar */
+
+}
+
+
+
+.photo-img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    aspect-ratio: 16/9;
+
+}
+
+
+
+.photo-caption {
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    background: rgba(127, 96, 0, 0.7); /* Marrom escuro semi-transparente */
+
+    color: #ffffff;
+
+    padding: 10px 15px;
+
+    font-size: 0.9em;
+
+    font-weight: 500;
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
+
+}
+
+
+
+.photo-card:hover .photo-caption {
+
+    opacity: 1;
+
+}
+
+
+
+/* Card especial que ocupa mais espaço */
+
+.wide-card {
+
+    grid-column: span 2;
+
+    aspect-ratio: 2/1;
+
+}
+
+
+
+/* MEDIA QUERIES - Responsividade */
+
+
+
+@media (min-width: 768px) {
+
+    #course.grid-layout,
+
+    #friends.grid-layout,
+
+    #family.grid-layout,
+
+    #dreams.grid-layout {
+
+        grid-template-columns: 1fr 2fr;
+
+    }
+
+   
+
+    .text-content {
+
+        grid-column: 1 / 2;
+
+    }
+
+   
+
+    .photo-grid-new {
+
+        grid-column: 2 / 3;
+
+    }
+
+   
+
+    #about.grid-layout {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+   
+
+    #about .section-title {
+
+        grid-column: 1 / -1;
+
+    }
+
+   
+
+    #about .text-content {
+
+        grid-column: 1 / -1;
+
+    }
+
+   
+
+    #about .photo-grid-new {
+
+        grid-template-columns: repeat(4, 1fr);
+
+    }
+
+   
+
+    #about .wide-card {
+
+        grid-column: span 2;
+
+        aspect-ratio: 16/9;
+
+    }
+
+   
+
+    .photo-grid-new {
+
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+
+        gap: 20px;
+
+        grid-column: 1 / -1;
+
+    }
+
+}
+
+
+
+@media (max-width: 600px) {
+
+    .modern-container {
+
+        padding: 10px;
+
+    }
+
+   
+
+    #site-title {
+
+        font-size: 2.5em;
+
+    }
+
+   
+
+    .nav-btn {
+
+        padding: 6px 15px;
+
+        font-size: 0.9em;
+
+    }
+
+   
+
+    .section-title {
+
+        font-size: 1.8em;
+
+    }
+
+   
+
+    .photo-grid-new {
+
+        grid-template-columns: 1fr;
+
+    }
+
+   
+
+    .wide-card {
+
+        grid-column: span 1;
+
+        aspect-ratio: 16/9;
+
+    }
+
+}/* ... (Seu CSS anterior) ... */
+
+
+
+/* NOVO GRID PARA FOTOS */
+
+.photo-grid-new {
+
+    display: grid;
+
+    /* Define colunas responsivas, 2 colunas no padrão, mas se adapta */
+
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+
+    gap: 15px;
+
+    grid-column: 1 / -1;
+
+}
+
+
+
+.photo-card {
+
+    background: #FFF4A3; /* Um amarelo um pouco mais forte para o card */
+
+    border-radius: var(--border-radius);
+
+    overflow: hidden;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    position: relative;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+
+
+.photo-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+}
+
+
+
+.photo-img {
+
+    width: 100%;
+
+    height: 100%; /* Garante que a imagem preencha o card */
+
+    object-fit: cover; /* Recorta a imagem para cobrir o espaço, sem distorcer */
+
+    display: block;
+
+    aspect-ratio: 1/1; /* <-- Mudança Importante: Fotos quadradas (ou 4/3, 16/9) */
+
+}
+
+/* ... (O resto do seu CSS) ... */
+
+
+
+/* Sobrescrevendo para a seção 'Sobre Mim' em telas maiores para 4 colunas */
+
+@media (min-width: 768px) {
+
+    /* ... (Seu media query para telas maiores) ... */
+
+
+
+    #about .photo-grid-new {
+
+        grid-template-columns: repeat(4, 1fr); /* 4 colunas para a galeria principal */
+
+    }
+
+   
+
+    /* Remove a regra para wide-card na seção "About" se você quiser todas iguais */
+
+    #about .wide-card { /* Esta regra não será mais aplicada se você remover 'wide-card' do HTML */
+
+        grid-column: span 1; /* Garante que se comporta como um card normal */
+
+        aspect-ratio: 1/1; /* Ou 4/3, 16/9, o que preferir */
+
+    }
+
+}
+
+
+
+@media (max-width: 600px) {
+
+    /* ... (Seu media query para mobile) ... */
+
+
+
+    .photo-grid-new {
+
+        grid-template-columns: 1fr; /* Coluna única em mobile */
+
+    }
+
+   
+
+    .wide-card { /* Esta regra não será mais aplicada se você remover 'wide-card' do HTML */
+
+        grid-column: span 1;
+
+        aspect-ratio: 1/1; /* Ou 4/3, 16/9, o que preferir */
+
+    }
+
+}/* style.css */
+
+
+
+/* 1. Esconde todas as seções (páginas) por padrão */
+
+.page {
+
+    display: none;
+
+    opacity: 0; /* Para suavizar a transiçãoica algumas cores, mas o CSS é mais robusto */
 
     /* Garanta que o estilo destaque o botão */
 
