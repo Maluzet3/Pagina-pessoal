@@ -35,14 +35,18 @@ async function onConfigChange(config) {
   document.body.style.background = config.background_color || defaultConfig.background_color;
   document.body.style.color = config.text_color || defaultConfig.text_color;
 
-  const h1 = document.querySelector('h1');
-  h1.style.color = config.text_color || defaultConfig.text_color;
-  h1.style.fontSize = `${baseSize * 3.5 / 16}rem`; 
-  
-  const subtitle = document.querySelector('.subtitle');
-  subtitle.style.color = config.secondary_text_color || defaultConfig.secondary_text_color;
-  subtitle.style.fontSize = `${baseSize * 1.5 / 16}rem`;
+  // Dentro da função onConfigChange:
 
+// 1. Seu Nome (h1)
+const h1 = document.querySelector('h1');
+// Aumente o número 3.5 para algo como 4.5 ou 5.0
+h1.style.fontSize = `${baseSize * 3.5 / 16}rem`; 
+// ...
+
+// 2. Seu Subtítulo (.subtitle)
+const subtitle = document.querySelector('.subtitle');
+// Aumente o número 1.5 para algo como 1.8 ou 2.0
+subtitle.style.fontSize = `${baseSize * 1.5 / 16}rem`;
 
   const sectionTitles = document.querySelectorAll('.section-title');
   sectionTitles.forEach(title => {
