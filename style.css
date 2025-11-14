@@ -37,16 +37,18 @@ header {
   margin-bottom: 50px;
 }
 
+/* Seu Nome */
 h1 {
-  font-size: 3.5rem;
+  font-size: 3.5rem; /* AUMENTE ESTE VALOR para deixar o nome maior. Ex: 4.5rem */
   margin: 0;
   color: var(--secondary-color);
   font-weight: 700;
   letter-spacing: -1px;
 }
 
+/* Seu Subtítulo */
 .subtitle {
-  font-size: 1.5rem;
+  font-size: 1.5rem; /* AUMENTE ESTE VALOR para deixar o subtítulo maior. Ex: 2rem */
   color: var(--light-text);
   margin-top: 5px;
   font-weight: 300;
