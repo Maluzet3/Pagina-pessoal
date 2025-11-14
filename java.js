@@ -315,4 +315,9 @@ navButtons.forEach(button => {
         
         // ... (resto do código)
     });
+});// AJUSTE NA LÓGICA DE NAVEGAÇÃO EXISTENTE
+navButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // ... (resto do código)
+    });
 });
