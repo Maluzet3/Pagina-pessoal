@@ -1,245 +1,140 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Pessoal - Malu Girelli</title>
-    <!-- Carregando Tailwind CSS CDN para estilos modernos -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Configuração de Fonte (Inter) -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-        :root {
-            font-family: 'Inter', sans-serif;
-        }
-        /* Custom styles for the photo grid and transitions */
-        .grid-layout {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-        }
-        .grid-layout.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .photo-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .photo-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-    </style>
-</head>
-<body class="bg-gray-50 min-h-screen p-4 sm:p-8">
-    <div class="modern-container max-w-4xl mx-auto bg-white shadow-xl rounded-3xl overflow-hidden border border-gray-100">
+    <title>Página Pessoal</title>
+    <link rel="stylesheet" href="style.css"> <script src="/_sdk/element_sdk.js"></script>
+    <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+    <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+    <style>@view-transition { navigation: auto; }</style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1 id="site-title">Meu Nome</h1>
+        <p class="subtitle" id="site-subtitle">Corajosa e Chorona</p>
 
-        <!-- HEADER E PERFIL -->
-        <header class="profile-header p-6 sm:p-10 border-b border-gray-200 bg-pink-50">
-            <h1 id="site-title" class="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight">Malu Girelli</h1>
-            <p class="subtitle mt-1 text-xl text-pink-600 font-medium italic" id="site-subtitle">Corajosa e Chorona</p>
-            
-            <!-- SOCIAL LINKS -->
-            <div class="social-links mt-4 flex space-x-4">
-                <a href="https://www.instagram.com/malu.girelli?igsh=MjJreWtnc3JtaHpz" target="_blank" class="social-icon text-gray-500 hover:text-pink-600 transition-colors p-2 rounded-full bg-white shadow-sm" aria-label="Instagram">
-                    <i class="fab fa-instagram text-xl"></i>
-                </a>
-                <a href="https://wa.me/qr/3U5O6Q4ARMHDJ1" target="_blank" class="social-icon text-gray-500 hover:text-pink-600 transition-colors p-2 rounded-full bg-white shadow-sm" aria-label="WhatsApp">
-                    <i class="fab fa-whatsapp text-xl"></i>
-                </a>
-                <a href="AQUI_VAI_O_LINK_DO_SEU_LINKEDIN" target="_blank" class="social-icon text-gray-500 hover:text-pink-600 transition-colors p-2 rounded-full bg-white shadow-sm" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin-in text-xl"></i>
-                </a>
-                <a href="https://github.com/Maluzet3" target="_blank" class="social-icon text-gray-500 hover:text-pink-600 transition-colors p-2 rounded-full bg-white shadow-sm" aria-label="GitHub">
-                    <i class="fab fa-github text-xl"></i>
-                </a>
-            </div>
-            
-            <!-- NAV MENU -->
-            <nav class="nav-menu mt-8 flex flex-wrap gap-2 sm:gap-4">
-                <button class="nav-btn bg-pink-600 text-white shadow-md active px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 hover:bg-pink-700" data-page="about">Sobre Mim</button>
-                <button class="nav-btn bg-gray-200 text-gray-700 shadow-sm px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 hover:bg-pink-100 hover:text-pink-700" data-page="course">Meu Curso</button>
-                <button class="nav-btn bg-gray-200 text-gray-700 shadow-sm px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 hover:bg-pink-100 hover:text-pink-700" data-page="friends">Meus Amigos</button>
-                <button class="nav-btn bg-gray-200 text-gray-700 shadow-sm px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 hover:bg-pink-100 hover:text-pink-700" data-page="family">Minha Família</button>
-                <button class="nav-btn bg-gray-200 text-gray-700 shadow-sm px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 hover:bg-pink-100 hover:text-pink-700" data-page="dreams">Meus Sonhos</button>
-            </nav>
-        </header>
+        <div class="social-links">
+            <a href="https://www.instagram.com/" target="_blank" class="social-icon" id="instagram-link">
+                <span class="icon">📱</span> Instagram
+            </a>
+            <a href="https://wa.me/" target="_blank" class="social-icon" id="whatsapp-link">
+                <span class="icon">🟢</span> WhatsApp
+            </a>
+            <a href="https://github.com/" target="_blank" class="social-icon" id="github-link">
+                <span class="icon">🐙</span> GitHub
+            </a>
+            <a href="https://www.tiktok.com/" target="_blank" class="social-icon" id="tiktok-link">
+                <span class="icon">🎵</span> TikTok
+            </a>
+        </div>
         
-        <!-- CONTEÚDO PRINCIPAL -->
-        <main class="content-wrapper p-6 sm:p-10">
-            
-            <!-- PÁGINA: SOBRE MIM -->
-            <div id="about" class="page active grid-layout block">
-                <h2 class="section-title text-3xl font-bold text-gray-800 mb-4" id="about-title">Sobre Mim</h2>
-                <div class="text-content mb-8">
-                    <p class="content-text text-gray-600 leading-relaxed" id="about-text">Olá! Bem-vindo à minha página pessoal. Aqui você pode conhecer um pouco mais sobre mim, minha jornada, minhas paixões e o que me inspira todos os dias.</p>
-                </div>
-                <div class="photo-grid-new grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div class="photo-card bg-gray-50 rounded-xl overflow-hidden shadow-lg">
-                        <!-- Imagem com placeholder e fallback de erro -->
-                        <img src="https://placehold.co/400x300/a3e635/000?text=Malu+Principal" alt="Sua foto principal" class="photo-img w-full h-32 md:h-40 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x300/fecaca/9f1239?text=Erro+Foto';" loading="lazy">
-                        <div class="photo-caption text-center p-2 text-sm font-medium text-gray-700">Foto Principal</div>
-                    </div>
-                    <div class="photo-card bg-gray-50 rounded-xl overflow-hidden shadow-lg">
-                        <img src="https://placehold.co/400x300/f43f5e/fff?text=Momentos+Especiais" alt="Momentos especiais" class="photo-img w-full h-32 md:h-40 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x300/fecaca/9f1239?text=Erro+Foto';" loading="lazy">
-                        <div class="photo-caption text-center p-2 text-sm font-medium text-gray-700">Momentos Especiais</div>
-                    </div>
-                    <div class="photo-card bg-gray-50 rounded-xl overflow-hidden shadow-lg">
-                        <img src="https://placehold.co/400x300/38bdf8/000?text=Conquistas" alt="Suas conquistas" class="photo-img w-full h-32 md:h-40 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x300/fecaca/9f1239?text=Erro+Foto';" loading="lazy">
-                        <div class="photo-caption text-center p-2 text-sm font-medium text-gray-700">Conquistas</div>
-                    </div>
-                    <div class="photo-card bg-gray-50 rounded-xl overflow-hidden shadow-lg">
-                        <img src="https://placehold.co/400x300/78350f/fff?text=Paix%C3%B5es" alt="Suas paixões" class="photo-img w-full h-32 md:h-40 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x300/fecaca/9f1239?text=Erro+Foto';" loading="lazy">
-                        <div class="photo-caption text-center p-2 text-sm font-medium text-gray-700">Paixões</div>
-                    </div>
-                </div>
+        <nav>
+          <button class="nav-btn active" data-page="about">Sobre Mim</button>
+          <button class="nav-btn" data-page="course">Meu Curso</button>
+          <button class="nav-btn" data-page="friends">Meus Amigos</button>
+          <button class="nav-btn" data-page="family">Minha Família</button>
+          <button class="nav-btn" data-page="dreams">Meus Sonhos</button>
+        </nav>
+      </header>
+      <main>
+        <div id="about" class="page active">
+          <h2 class="section-title" id="about-title">Sobre Mim</h2>
+          <p class="content-text" id="about-text">Olá! Bem-vindo à minha página pessoal. Aqui você pode conhecer um pouco mais sobre mim, minha jornada, minhas paixões e o que me inspira todos os dias.</p>
+          <div class="photo-grid">
+            <div class="photo-placeholder large">
+              <img src="images/eu.jpg" alt="Minha foto" class="page-image">
             </div>
+            <div class="photo-placeholder">
+              <img src="images/momentos.jpg" alt="Momentos especiais" class="page-image">
+            </div>
+            <div class="photo-placeholder">
+              <img src="images/conquistas.jpg" alt="Minhas conquistas" class="page-image">
+            </div>
+            <div class="photo-placeholder">
+              <img src="images/paixoes.jpg" alt="Minhas paixões" class="page-image">
+            </div>
+          </div>
+        </div>
 
-            <!-- PÁGINA: MEU CURSO (CORRIGIDA) -->
-            <div id="course" class="page grid-layout hidden">
-                <h2 class="section-title text-3xl font-bold text-gray-800 mb-4" id="course-title">Meu Curso</h2>
-                <div class="text-content mb-8">
-                    <p class="content-text text-gray-600 leading-relaxed" id="course-text">
-                        Como aluna do 2°CDS de Desenvolvimento de Sistemas, foco na criação de soluções eficientes para plataformas Web, Mobile e Desktop. Meu aprendizado abrange da análise de necessidades à codificação e implementação de softwares.
-                    </p>
-                </div>
-                <!-- O bloco de fotos está AGORA corretamente DENTRO da div "course" -->
-                <div class="photo-grid-new grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div class="photo-card bg-gray-50 rounded-xl overflow-hidden shadow-lg">
-                        <img src="https://placehold.co/400x300/5b21b6/fff?text=CDS+Foto+1" alt="Foto do curso" class="photo-img w-full h-32 md:h-40 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x300/fecaca/9f1239?text=Erro+Foto';" loading="lazy">
-                        <div class="photo-caption text-center p-2 text-sm font-medium text-gray-700">Os mais mais do szy</div>
-                    </div>
-                    <div class="photo-card bg-gray-50 rounded-xl overflow-hidden shadow-lg">
-                        <img src="https://placehold.co/400x300/22c55e/000?text=Minha+Turma" alt="Foto da universidade" class="photo-img w-full h-32 md:h-40 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x300/fecaca/9f1239?text=Erro+Foto';" loading="lazy">
-                        <div class="photo-caption text-center p-2 text-sm font-medium text-gray-700">Minha turma</div>
-                    </div>
-                    <div class="photo-card bg-gray-50 rounded-xl overflow-hidden shadow-lg">
-                        <img src="https://placehold.co/400x300/ef4444/fff?text=Passeios" alt="Foto dos estudos" class="photo-img w-full h-32 md:h-40 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x300/fecaca/9f1239?text=Erro+Foto';" loading="lazy">
-                        <div class="photo-caption text-center p-2 text-sm font-medium text-gray-700">Passeios</div>
-                    </div>
-                    <div class="photo-card bg-gray-50 rounded-xl overflow-hidden shadow-lg">
-                        <img src="https://placehold.co/400x300/f97316/fff?text=Feira+Profiss%C3%B5es" alt="Projetos acadêmicos" class="photo-img w-full h-32 md:h-40 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x300/fecaca/9f1239?text=Erro+Foto';" loading="lazy">
-                        <div class="photo-caption text-center p-2 text-sm font-medium text-gray-700">Feira de Profissões</div>
-                    </div>
-                </div>
+        <div id="course" class="page">
+          <h2 class="section-title" id="course-title">Meu Curso</h2>
+          <p class="content-text" id="course-text">Estou cursando uma área que me apaixona e que me permite crescer profissionalmente. Aqui compartilho momentos e experiências da minha vida acadêmica.</p>
+          <div class="photo-grid">
+            <div class="photo-placeholder">
+              <img src="images/curso.jpg" alt="Foto do meu curso" class="page-image">
             </div>
-            
-            <!-- PÁGINA: MEUS AMIGOS -->
-            <div id="friends" class="page grid-layout hidden">
-                <h2 class="section-title text-3xl font-bold text-gray-800 mb-4" id="friends-title">Meus Amigos</h2>
-                <div class="text-content mb-8">
-                    <p class="content-text text-gray-600 leading-relaxed" id="friends-text">Amigos são a família que escolhemos. Aqui estão as pessoas especiais que fazem parte da minha vida e tornam cada momento mais especial.</p>
-                </div>
-                <div class="photo-grid-new grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div class="photo-card bg-gray-50 rounded-xl overflow-hidden shadow-lg">
-                        <img src="https://placehold.co/400x300/8b5cf6/fff?text=Amigos+1" alt="Foto com amigos" class="photo-img w-full h-32 md:h-40 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x300/fecaca/9f1239?text=Erro+Foto';" loading="lazy">
-                        <div class="photo-caption text-center p-2 text-sm font-medium text-gray-700">Com os Amigos</div>
-                    </div>
-                    <div class="photo-card bg-gray-50 rounded-xl overflow-hidden shadow-lg">
-                        <img src="https://placehold.co/400x300/fb923c/000?text=Risadas" alt="Momentos especiais com amigos" class="photo-img w-full h-32 md:h-40 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x300/fecaca/9f1239?text=Erro+Foto';" loading="lazy">
-                        <div class="photo-caption text-center p-2 text-sm font-medium text-gray-700">Risadas</div>
-                    </div>
-                    <div class="photo-card bg-gray-50 rounded-xl overflow-hidden shadow-lg">
-                        <img src="https://placehold.co/400x300/ec4899/fff?text=Melhores+Amizades" alt="Amizades" class="photo-img w-full h-32 md:h-40 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x300/fecaca/9f1239?text=Erro+Foto';" loading="lazy">
-                        <div class="photo-caption text-center p-2 text-sm font-medium text-gray-700">Melhores Amizades</div>
-                    </div>
-                    <div class="photo-card bg-gray-50 rounded-xl overflow-hidden shadow-lg">
-                        <img src="https://placehold.co/400x300/10b981/000?text=Boas+Lembran%C3%A7as" alt="Bons momentos com amigos" class="photo-img w-full h-32 md:h-40 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x300/fecaca/9f1239?text=Erro+Foto';" loading="lazy">
-                        <div class="photo-caption text-center p-2 text-sm font-medium text-gray-700">Boas Lembranças</div>
-                    </div>
-                </div>
+            <div class="photo-placeholder">
+              <img src="images/universidade.jpg" alt="Foto da universidade" class="page-image">
             </div>
-            
-            <!-- PÁGINA: MINHA FAMÍLIA -->
-            <div id="family" class="page grid-layout hidden">
-                <h2 class="section-title text-3xl font-bold text-gray-800 mb-4" id="family-title">Minha Família</h2>
-                <div class="text-content mb-8">
-                    <p class="content-text text-gray-600 leading-relaxed" id="family-text">A família é a base de tudo. Aqui compartilho um pouco sobre as pessoas que me apoiam, me inspiram e estão sempre ao meu lado.</p>
-                </div>
-                <div class="photo-grid-new grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div class="photo-card bg-gray-50 rounded-xl overflow-hidden shadow-lg">
-                        <img src="https://placehold.co/400x300/3b82f6/fff?text=Fam%C3%ADlia+Base" alt="Foto da família" class="photo-img w-full h-32 md:h-40 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x300/fecaca/9f1239?text=Erro+Foto';" loading="lazy">
-                        <div class="photo-caption text-center p-2 text-sm font-medium text-gray-700">Minha Base</div>
-                    </div>
-                    <div class="photo-card bg-gray-50 rounded-xl overflow-hidden shadow-lg">
-                        <img src="https://placehold.co/400x300/a855f7/fff?text=Uni%C3%A3o" alt="Momentos em família" class="photo-img w-full h-32 md:h-40 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x300/fecaca/9f1239?text=Erro+Foto';" loading="lazy">
-                        <div class="photo-caption text-center p-2 text-sm font-medium text-gray-700">União</div>
-                    </div>
-                    <div class="photo-card bg-gray-50 rounded-xl overflow-hidden shadow-lg">
-                        <img src="https://placehold.co/400x300/f9a8d4/000?text=Celebra%C3%A7%C3%B5es" alt="Reuniões familiares" class="photo-img w-full h-32 md:h-40 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x300/fecaca/9f1239?text=Erro+Foto';" loading="lazy">
-                        <div class="photo-caption text-center p-2 text-sm font-medium text-gray-700">Celebrações</div>
-                    </div>
-                    <div class="photo-card bg-gray-50 rounded-xl overflow-hidden shadow-lg">
-                        <img src="https://placehold.co/400x300/4ade80/000?text=Momentos" alt="Celebrações em família" class="photo-img w-full h-32 md:h-40 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x300/fecaca/9f1239?text=Erro+Foto';" loading="lazy">
-                        <div class="photo-caption text-center p-2 text-sm font-medium text-gray-700">Momentos</div>
-                    </div>
-                </div>
+            <div class="photo-placeholder">
+              <img src="images/estudos.jpg" alt="Minha área de estudo" class="page-image">
             </div>
-            
-            <!-- PÁGINA: MEUS SONHOS -->
-            <div id="dreams" class="page grid-layout hidden">
-                <h2 class="section-title text-3xl font-bold text-gray-800 mb-4" id="dreams-title">Meus Sonhos</h2>
-                <div class="text-content mb-8">
-                    <p class="content-text text-gray-600 leading-relaxed" id="dreams-text">Sonhar é essencial para crescer. Aqui compartilho minhas aspirações, objetivos e tudo aquilo que me motiva a seguir em frente todos os dias.</p>
-                </div>
-                <div class="photo-grid-new grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div class="photo-card bg-gray-50 rounded-xl overflow-hidden shadow-lg">
-                        <img src="https://placehold.co/400x300/06b6d4/fff?text=Eng+Mac" alt="Objetivos" class="photo-img w-full h-32 md:h-40 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x300/fecaca/9f1239?text=Erro+Foto';" loading="lazy">
-                        <div class="photo-caption text-center p-2 text-sm font-medium text-gray-700">Objetivo</div>
-                    </div>
-                    <div class="photo-card bg-gray-50 rounded-xl overflow-hidden shadow-lg">
-                        <img src="https://placehold.co/400x300/84cc16/fff?text=Casamento" alt="Metas" class="photo-img w-full h-32 md:h-40 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x300/fecaca/9f1239?text=Erro+Foto';" loading="lazy">
-                        <div class="photo-caption text-center p-2 text-sm font-medium text-gray-700">Plano</div>
-                    </div>
-                    <div class="photo-card bg-gray-50 rounded-xl overflow-hidden shadow-lg">
-                        <img src="https://placehold.co/400x300/facc15/000?text=Viagem" alt="Inspirações" class="photo-img w-full h-32 md:h-40 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x300/fecaca/9f1239?text=Erro+Foto';" loading="lazy">
-                        <div class="photo-caption text-center p-2 text-sm font-medium text-gray-700">Conhecer o mundo</div>
-                    </div>
-                    <div class="photo-card bg-gray-50 rounded-xl overflow-hidden shadow-lg">
-                        <img src="https://placehold.co/400x300/9333ea/fff?text=Casa" alt="Futuro" class="photo-img w-full h-32 md:h-40 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x300/fecaca/9f1239?text=Erro+Foto';" loading="lazy">
-                        <div class="photo-caption text-center p-2 text-sm font-medium text-gray-700">Futuro</div>
-                    </div>
-                </div>
+            <div class="photo-placeholder">
+              <img src="images/projeto.jpg" alt="Projeto acadêmico" class="page-image">
             </div>
+          </div>
+        </div>
 
-        </main>
+        <div id="friends" class="page">
+          <h2 class="section-title" id="friends-title">Meus Amigos</h2>
+          <p class="content-text" id="friends-text">Amigos são a família que escolhemos. Aqui estão as pessoas especiais que fazem parte da minha vida e tornam cada momento mais especial.</p>
+          <div class="photo-grid">
+            <div class="photo-placeholder">
+              <img src="images/amigos1.jpg" alt="Foto com meus amigos" class="page-image">
+            </div>
+            <div class="photo-placeholder">
+              <img src="images/amigos2.jpg" alt="Festa com amigos" class="page-image">
+            </div>
+            <div class="photo-placeholder">
+              <img src="images/amigos3.jpg" alt="Amigos em um encontro" class="page-image">
+            </div>
+            <div class="photo-placeholder">
+              <img src="images/amigos4.jpg" alt="Bons momentos com amigos" class="page-image">
+            </div>
+          </div>
+        </div>
+
+        <div id="family" class="page">
+          <h2 class="section-title" id="family-title">Minha Família</h2>
+          <p class="content-text" id="family-text">A família é a base de tudo. Aqui compartilho um pouco sobre as pessoas que me apoiam, me inspiram e estão sempre ao meu lado.</p>
+          <div class="photo-grid">
+            <div class="photo-placeholder">
+              <img src="images/familia1.jpg" alt="Foto da minha família" class="page-image">
+            </div>
+            <div class="photo-placeholder">
+              <img src="images/familia2.jpg" alt="Momentos felizes em família" class="page-image">
+            </div>
+            <div class="photo-placeholder">
+              <img src="images/familia3.jpg" alt="Reunião de família" class="page-image">
+            </div>
+            <div class="photo-placeholder">
+              <img src="images/familia4.jpg" alt="Celebração familiar" class="page-image">
+            </div>
+          </div>
+        </div>
+
+        <div id="dreams" class="page">
+          <h2 class="section-title" id="dreams-title">Meus Sonhos</h2>
+          <p class="content-text" id="dreams-text">Sonhar é essencial para crescer. Aqui compartilho minhas aspirações, objetivos e tudo aquilo que me motiva a seguir em frente todos os dias.</p>
+          <div class="photo-grid">
+            <div class="photo-placeholder">
+              <img src="images/sonho1.jpg" alt="Meus objetivos" class="page-image">
+            </div>
+            <div class="photo-placeholder">
+              <img src="images/sonho2.jpg" alt="Minhas metas de vida" class="page-image">
+            </div>
+            <div class="photo-placeholder">
+              <img src="images/sonho3.jpg" alt="Minhas inspirações" class="page-image">
+            </div>
+            <div class="photo-placeholder">
+              <img src="images/sonho4.jpg" alt="Meu futuro" class="page-image">
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
-
-    <!-- JAVASCRIPT: Lógica de Navegação -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const navButtons = document.querySelectorAll('.nav-btn');
-            const pages = document.querySelectorAll('.page');
-
-            navButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    const targetPageId = button.getAttribute('data-page');
-
-                    // 1. Desativa todos os botões e páginas (esconde)
-                    navButtons.forEach(btn => {
-                        // Remove classes de ativo (cor e sombra)
-                        btn.classList.remove('bg-pink-600', 'text-white', 'shadow-md', 'active');
-                        // Adiciona classes de inativo
-                        btn.classList.add('bg-gray-200', 'text-gray-700', 'shadow-sm', 'hover:bg-pink-100', 'hover:text-pink-700');
-                    });
-                    
-                    pages.forEach(page => {
-                        page.classList.remove('active', 'block');
-                        page.classList.add('hidden');
-                    });
-
-                    // 2. Ativa o botão clicado e mostra a página alvo
-                    button.classList.add('active', 'bg-pink-600', 'text-white', 'shadow-md');
-                    button.classList.remove('bg-gray-200', 'text-gray-700', 'shadow-sm', 'hover:bg-pink-100', 'hover:text-pink-700');
-                    
-                    const targetPage = document.getElementById(targetPageId);
-                    if (targetPage) {
-                        targetPage.classList.remove('hidden');
-                        targetPage.classList.add('active', 'block'); // 'active' for custom transition style
-                    }
-                });
-            });
-        });
-    </script>
-</body>
+    <script src="java.js"></script>
+  </body>
 </html>
