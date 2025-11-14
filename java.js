@@ -1,17 +1,18 @@
-// O JAVASCRIPT NÃO PRECISA DE MUDANÇAS
 const defaultConfig = {
-  background_color: '#FFF9E6',
-  accent_color: '#FFD93D',
-  text_color: '#5C4A1F',
-  secondary_text_color: '#6B5A2E',
-  font_family: 'Segoe UI',
+  background_color: 'hsl(45, 100%, 97%)', // Amarelo muito claro
+  accent_color: 'hsl(45, 100%, 70%)', // Amarelo principal
+  text_color: '#333333', // Texto principal
+  secondary_text_color: '#666666', // Texto secundário
+  font_family: 'Inter',
   font_size: 16,
   site_title: 'Meu Nome',
   site_subtitle: 'Corajosa e Chorona',
-  instagram_link: 'https://www.instagram.com/',
-  whatsapp_link: 'https://wa.me/',
-  github_link: 'https://github.com/',
-  tiktok_link: 'https://www.tiktok.com/',
+  
+  instagram_link: 'https://www.instagram.com/malu.girelli?igsh=MjJreWtnc3JtaHpz',
+  whatsapp_link: 'https://wa.me/qr/3U5O6Q4ARMHDJ1',
+  linkedin_link: 'AQUI_VAI_O_LINK_DO_SEU_LINKEDIN', 
+  github_link: 'https://github.com/Maluzet3',
+  
   about_title: 'Sobre Mim',
   about_text: 'Olá! Bem-vindo à minha página pessoal. Aqui você pode conhecer um pouco mais sobre mim, minha jornada, minhas paixões e o que me inspira todos os dias.',
   course_title: 'Meu Curso',
@@ -28,6 +29,7 @@ async function onConfigChange(config) {
   const customFont = config.font_family || defaultConfig.font_family;
   const baseFontStack = 'Tahoma, Geneva, Verdana, sans-serif';
   const baseSize = config.font_size || defaultConfig.font_size;
+  const accentColor = config.accent_color || defaultConfig.accent_color;
 
   document.body.style.fontFamily = `${customFont}, ${baseFontStack}`;
   document.body.style.background = config.background_color || defaultConfig.background_color;
@@ -35,33 +37,34 @@ async function onConfigChange(config) {
 
   const h1 = document.querySelector('h1');
   h1.style.color = config.text_color || defaultConfig.text_color;
-  h1.style.fontSize = `${baseSize * 4}px`;
+  h1.style.fontSize = `${baseSize * 3.5 / 16}rem`; 
   
   const subtitle = document.querySelector('.subtitle');
-  subtitle.style.color = config.text_color || defaultConfig.text_color;
-  subtitle.style.fontSize = `${baseSize * 1.5}px`;
+  subtitle.style.color = config.secondary_text_color || defaultConfig.secondary_text_color;
+  subtitle.style.fontSize = `${baseSize * 1.5 / 16}rem`;
 
 
   const sectionTitles = document.querySelectorAll('.section-title');
   sectionTitles.forEach(title => {
     title.style.color = config.text_color || defaultConfig.text_color;
-    title.style.borderLeftColor = config.accent_color || defaultConfig.accent_color;
-    title.style.fontSize = `${baseSize * 2.25}px`;
+    title.style.borderLeftColor = accentColor;
+    title.style.fontSize = `${baseSize * 2.2 / 16}rem`;
   });
 
   const contentTexts = document.querySelectorAll('.content-text');
   contentTexts.forEach(text => {
     text.style.color = config.secondary_text_color || defaultConfig.secondary_text_color;
-    text.style.fontSize = `${baseSize * 1.125}px`;
+    text.style.fontSize = `${baseSize * 1.1 / 16}rem`;
   });
-
+  
   const navBtns = document.querySelectorAll('.nav-btn');
   navBtns.forEach(btn => {
-    btn.style.borderColor = config.accent_color || defaultConfig.accent_color;
+    btn.style.borderColor = accentColor;
     btn.style.color = config.text_color || defaultConfig.text_color;
-    btn.style.fontSize = `${baseSize}px`;
+    btn.style.fontSize = `${baseSize / 16}rem`;
     if (btn.classList.contains('active')) {
-      btn.style.background = config.accent_color || defaultConfig.accent_color;
+      btn.style.background = accentColor;
+      btn.style.color = config.secondary_text_color; // Cor de texto escuro para o botão ativo
     } else {
       btn.style.background = 'transparent';
     }
@@ -69,25 +72,27 @@ async function onConfigChange(config) {
   
   const socialIcons = document.querySelectorAll('.social-icon');
   socialIcons.forEach(icon => {
-    icon.style.borderColor = config.accent_color || defaultConfig.accent_color;
-    icon.style.color = config.secondary_text_color || defaultConfig.secondary_text_color;
+    icon.style.borderColor = accentColor; // Borda amarela
+    icon.style.color = config.secondary_text_color || defaultConfig.secondary_text_color; // Ícone escuro
   });
 
   const header = document.querySelector('header');
-  header.style.borderBottomColor = config.accent_color || defaultConfig.accent_color;
+  header.style.borderBottomColor = accentColor;
 
   const photoPlaceholders = document.querySelectorAll('.photo-placeholder');
   photoPlaceholders.forEach(ph => {
-    ph.style.borderColor = config.accent_color || defaultConfig.accent_color;
+    ph.style.borderColor = accentColor;
+    ph.style.background = 'white'; 
   });
 
   document.getElementById('site-title').textContent = config.site_title || defaultConfig.site_title;
   document.getElementById('site-subtitle').textContent = config.site_subtitle || defaultConfig.site_subtitle; 
   
-  document.getElementById('instagram-link').href = config.instagram_link || defaultConfig.instagram_link;
-  document.getElementById('whatsapp-link').href = config.whatsapp_link || defaultConfig.whatsapp_link;
-  document.getElementById('github-link').href = config.github_link || defaultConfig.github_link;
-  document.getElementById('tiktok-link').href = config.tiktok_link || defaultConfig.tiktok_link;
+  document.querySelector('.social-links a[aria-label="Instagram"]').href = config.instagram_link || defaultConfig.instagram_link;
+  document.querySelector('.social-links a[aria-label="WhatsApp"]').href = config.whatsapp_link || defaultConfig.whatsapp_link;
+  document.querySelector('.social-links a[aria-label="LinkedIn"]').href = config.linkedin_link || defaultConfig.linkedin_link;
+  document.querySelector('.social-links a[aria-label="GitHub"]').href = config.github_link || defaultConfig.github_link;
+
 
   document.getElementById('about-title').textContent = config.about_title || defaultConfig.about_title;
   document.getElementById('about-text').textContent = config.about_text || defaultConfig.about_text;
@@ -157,8 +162,8 @@ function mapToEditPanelValues(config) {
     ['site_subtitle', config.site_subtitle || defaultConfig.site_subtitle], 
     ['instagram_link', config.instagram_link || defaultConfig.instagram_link],
     ['whatsapp_link', config.whatsapp_link || defaultConfig.whatsapp_link],
+    ['linkedin_link', config.linkedin_link || defaultConfig.linkedin_link], 
     ['github_link', config.github_link || defaultConfig.github_link],
-    ['tiktok_link', config.tiktok_link || defaultConfig.tiktok_link],
     
     ['about_title', config.about_title || defaultConfig.about_title],
     ['about_text', config.about_text || defaultConfig.about_text],
@@ -192,14 +197,19 @@ navButtons.forEach(button => {
     navButtons.forEach(btn => {
       btn.classList.remove('active');
       btn.style.background = 'transparent';
+      btn.style.color = window.elementSdk?.config?.text_color || defaultConfig.text_color;
+      btn.style.borderColor = window.elementSdk?.config?.accent_color || defaultConfig.accent_color; // Garante a cor da borda
     });
     pages.forEach(page => {
       page.classList.remove('active');
     });
 
     button.classList.add('active');
-    const config = window.elementSdk ? window.elementSdk.config : defaultConfig;
-    button.style.background = config.accent_color || defaultConfig.accent_color;
+    const accentColor = window.elementSdk?.config?.accent_color || defaultConfig.accent_color;
+    const secondaryTextColor = window.elementSdk?.config?.secondary_text_color || defaultConfig.secondary_text_color;
+    button.style.background = accentColor;
+    button.style.color = secondaryTextColor; // Texto escuro no botão ativo
+    button.style.borderColor = accentColor; // Borda também amarela
     document.getElementById(targetPage).classList.add('active');
   });
 });
