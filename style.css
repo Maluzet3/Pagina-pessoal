@@ -37,18 +37,16 @@ header {
   margin-bottom: 50px;
 }
 
-/* Seu Nome */
 h1 {
-  font-size: 3.5rem; /* AUMENTE ESTE VALOR para deixar o nome maior. Ex: 4.5rem */
+  font-size: 3.5rem;
   margin: 0;
   color: var(--secondary-color);
   font-weight: 700;
   letter-spacing: -1px;
 }
 
-/* Seu Subtítulo */
 .subtitle {
-  font-size: 1.5rem; /* AUMENTE ESTE VALOR para deixar o subtítulo maior. Ex: 2rem */
+  font-size: 1.5rem;
   color: var(--light-text);
   margin-top: 5px;
   font-weight: 300;
@@ -76,7 +74,7 @@ h1 {
   transition: var(--transition);
   font-size: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  background-color: #f5ee8a; /* Fundo branco para os ícones */
+  background-color: #eee23e; /* Fundo branco para os ícones */
 }
 
 .social-icon:hover {
@@ -205,20 +203,88 @@ nav {
   .photo-grid {
     grid-template-columns: 1fr;
   }
-}/* Seu Nome */
-h1 {
-  font-size: 3.5rem; /* AUMENTE ESTE VALOR para deixar o nome maior. Ex: 4.5rem */
-  margin: 0;
-  color: var(--secondary-color);
-  font-weight: 700;
-  letter-spacing: -1px;
+}/* Paleta de Cores Atualizada (Tons de Amarelo) - Mantida */
+:root {
+  --bg-color: hsl(45, 100%, 97%); 
+  --primary-color: hsl(45, 100%, 70%); 
+  --secondary-color: #333333; 
+  --light-text: #666666; 
+  --border-color: hsl(45, 10%, 90%); 
+  --transition: all 0.3s ease;
+  --border-radius: 8px; 
 }
 
-/* Seu Subtítulo */
-.subtitle {
-  font-size: 1.5rem; /* AUMENTE ESTE VALOR para deixar o subtítulo maior. Ex: 2rem */
-  color: var(--light-text);
-  margin-top: 5px;
-  font-weight: 300;
-  margin-bottom: 30px;
+/* ... Outros estilos (h1, .subtitle, .social-icon, .nav-btn) - Mantidos ... */
+
+
+/* ---------------------------------
+Estilos da Galeria de Fotos e Legenda
+--------------------------------- 
+*/
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
 }
+
+.photo-placeholder {
+  background: #ffffff; 
+  border: 1px solid var(--border-color);
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  position: relative; /* ESSENCIAL: Permite posicionar a legenda absolutamente */
+  transition: var(--transition);
+  min-height: 200px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.photo-placeholder:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); 
+}
+
+.page-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: var(--transition);
+}
+
+/* ------------------- Legenda (Caption) ------------------- */
+
+.photo-caption {
+  position: absolute;
+  bottom: 0; /* Posiciona na parte inferior */
+  left: 0;
+  width: 100%;
+  padding: 10px 15px;
+  
+  /* Estilos da Legenda */
+  background: rgba(0, 0, 0, 0.7); /* Fundo preto semitransparente */
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+  
+  /* Efeito de Transição (aparecer e desaparecer) */
+  opacity: 0; /* Inicialmente invisível */
+  transform: translateY(100%); /* Inicialmente deslocado para baixo (fora da foto) */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Estado de Hover: Faz a legenda aparecer */
+.photo-placeholder:hover .photo-caption {
+  opacity: 1;
+  transform: translateY(0); /* Desloca para a posição normal */
+}
+
+/* Efeito sutil: Escurecer a imagem um pouco ao passar o mouse */
+.photo-placeholder:hover .page-image {
+    filter: brightness(0.85);
+}
+
+/* ... Media Queries (Ajustes para Mobile) - Mantidos ... */
