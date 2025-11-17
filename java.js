@@ -58,7 +58,7 @@ subtitle.style.fontSize = `${baseSize * 1.5 / 16}rem`;
   const contentTexts = document.querySelectorAll('.content-text');
   contentTexts.forEach(text => {
     text.style.color = config.secondary_text_color || defaultConfig.secondary_text_color;
-    text.style.fontSize = `${baseSize * 1.1 / 16}rem`;
+    text.style.fontSize = `${baseSize * 6.5 / 16}rem`;
   });
   
   const navBtns = document.querySelectorAll('.nav-btn');
