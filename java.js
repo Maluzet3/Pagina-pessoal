@@ -40,13 +40,13 @@ async function onConfigChange(config) {
 // 1. Seu Nome (h1)
 const h1 = document.querySelector('h1');
 // Aumente o número 3.5 para algo como 4.5 ou 5.0
-h1.style.fontSize = `${baseSize * 5.0 / 16}rem`; 
+h1.style.fontSize = `${baseSize * 8.0 / 16}rem`; 
 // ...
 
 // 2. Seu Subtítulo (.subtitle)
 const subtitle = document.querySelector('.subtitle');
 // Aumente o número 1.5 para algo como 1.8 ou 2.0
-subtitle.style.fontSize = `${baseSize * 1.5 / 16}rem`;
+subtitle.style.fontSize = `${baseSize * 1.5/ 16}rem`;
 
   const sectionTitles = document.querySelectorAll('.section-title');
   sectionTitles.forEach(title => {
