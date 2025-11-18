@@ -2,8 +2,8 @@
 :root {
   --bg-color: hsl(45, 100%, 97%); /* Amarelo muito claro, quase creme */
   --primary-color: hsl(45, 100%, 70%); /* Amarelo principal (milho/manteiga) */
-  --secondary-color: #333333; /* Texto principal escuro */
-  --light-text: #fffd79; /* Texto secundário */
+  --secondary-color: #e9ce56; /* Texto principal escuro */
+  --light-text: #686862; /* Texto secundário */
   --border-color: hsl(45, 10%, 90%); /* Cinza amarelado suave para bordas */
   --transition: all 0.3s ease;
   --border-radius: 8px; /* Cantos arredondados */
