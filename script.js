@@ -217,3 +217,30 @@ navButtons.forEach(button => {
     document.getElementById(targetPage).classList.add('active');
   });
 });
+function mostrarPagina(idPagina) {
+    // 1. Esconde todas as páginas
+    const paginas = document.querySelectorAll('.page');
+    paginas.forEach(p => {
+        p.classList.remove('active');
+    });
+
+    // 2. Remove o estado 'active' de todos os botões do menu
+    const botoes = document.querySelectorAll('.nav-btn');
+    botoes.forEach(b => {
+        b.classList.remove('active');
+    });
+
+    // 3. Mostra a página desejada
+    const paginaAlvo = document.getElementById(idPagina);
+    if (paginaAlvo) {
+        paginaAlvo.classList.add('active');
+    }
+}
+
+// Isso garante que os botões do menu que você já tem continuem funcionando
+document.querySelectorAll('.nav-btn').forEach(botao => {
+    botao.addEventListener('click', () => {
+        const pagina = botao.getAttribute('data-page');
+        if(pagina) mostrarPagina(pagina);
+    });
+});
