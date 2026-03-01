@@ -55,17 +55,22 @@
       </header>
 
       <main>
-        <div id="about" class="page active">
-          <h2 class="section-title">Sobre Mim</h2>
-          <p class="content-text">Olá! Bem-vindo à minha página pessoal. Aqui você pode conhecer um pouco mais sobre mim.</p>
-          
-          <div class="photo-grid">
-            <div class="photo-placeholder large">
-              <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" class="img-link">
-                <img src="eu.jpg" alt="Foto principal" class="page-image">
-              </a>
-              <div class="photo-caption">Clique na foto para ver mais (Nova Aba)</div> 
-            </div>
+       <div class="photo-placeholder large">
+    <img src="eu.jpg" alt="Foto principal" class="page-image" onclick="mostrarPagina('detalhes-foto')" style="cursor:pointer;">
+    <div class="photo-caption">Clique para ver detalhes</div> 
+</div>
+
+<div id="detalhes-foto" class="page">
+    <button onclick="mostrarPagina('about')" class="nav-btn" style="margin-bottom: 20px;">
+        <i class="fas fa-arrow-left"></i> Voltar
+    </button>
+    
+    <h2 class="section-title">Detalhes da Foto</h2>
+    <div class="photo-grid">
+        <img src="eu.jpg" style="width: 100%; border-radius: 15px;">
+        <p class="content-text">Aqui você pode escrever um texto maior sobre essa foto ou parte específica do seu site!</p>
+    </div>
+</div>
 
             <div class="photo-placeholder">
               <img src="niver.jpg" alt="Momentos especiais" class="page-image">
