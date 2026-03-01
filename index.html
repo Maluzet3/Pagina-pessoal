@@ -3,15 +3,26 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Pessoal</title>
+    <title>Página Pessoal | Malu Girelli</title>
     
     <link rel="stylesheet" href="style.css"> 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    
-    <script src="/_sdk/element_sdk.js"></script>
     <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
-    <style>@view-transition { navigation: auto; }</style>
+    
+    <style>
+      @view-transition { navigation: auto; }
+      
+      /* Efeito visual para indicar que a imagem é um botão */
+      .img-link {
+        display: block;
+        transition: transform 0.3s ease;
+      }
+      .img-link:hover {
+        transform: scale(1.02);
+        filter: brightness(0.9);
+      }
+    </style>
   </head>
   <body>
     <div class="container">
@@ -26,7 +37,7 @@
             <a href="https://wa.me/qr/3U5O6Q4ARMHDJ1" target="_blank" class="social-icon" aria-label="WhatsApp">
                 <i class="fab fa-whatsapp"></i>
             </a>
-            <a href="AQUI_VAI_O_LINK_DO_SEU_LINKEDIN" target="_blank" class="social-icon" aria-label="LinkedIn">
+            <a href="SEU_LINKEDIN_AQUI" target="_blank" class="social-icon" aria-label="LinkedIn">
                 <i class="fab fa-linkedin-in"></i>
             </a>
             <a href="https://github.com/Maluzet3" target="_blank" class="social-icon" aria-label="GitHub">
@@ -42,104 +53,40 @@
           <button class="nav-btn" data-page="dreams">Meus Sonhos</button>
         </nav>
       </header>
+
       <main>
         <div id="about" class="page active">
-          <h2 class="section-title" id="about-title">Sobre Mim</h2>
-          <p class="content-text" id="about-text">Olá! Bem-vindo à minha página pessoal. Aqui você pode conhecer um pouco mais sobre mim, minha jornada, minhas paixões e o que me inspira todos os dias.</p>
+          <h2 class="section-title">Sobre Mim</h2>
+          <p class="content-text">Olá! Bem-vindo à minha página pessoal. Aqui você pode conhecer um pouco mais sobre mim.</p>
+          
           <div class="photo-grid">
-            
             <div class="photo-placeholder large">
-              <img src="eu.jpg" alt="Foto principal" class="page-image">
-              <div class="photo-caption">Foto principal</div> </div>
+              <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" class="img-link">
+                <img src="eu.jpg" alt="Foto principal" class="page-image">
+              </a>
+              <div class="photo-caption">Clique na foto para ver mais (Nova Aba)</div> 
+            </div>
+
             <div class="photo-placeholder">
               <img src="niver.jpg" alt="Momentos especiais" class="page-image">
-              <div class="photo-caption">Momentos especiais</div> </div>
+              <div class="photo-caption">Momentos especiais</div> 
+            </div>
+            
             <div class="photo-placeholder">
               <img src="medalha.jpg" alt="Minhas conquistas" class="page-image">
-              <div class="photo-caption">Minhas conquistas</div> </div>
+              <div class="photo-caption">Minhas conquistas</div> 
+            </div>
+
             <div class="photo-placeholder">
               <img src="cafe.jpg" alt="Minhas paixões" class="page-image">
-              <div class="photo-caption">Minhas paixões</div> </div>
+              <div class="photo-caption">Minhas paixões</div> 
+            </div>
           </div>
         </div>
 
-        <div id="course" class="page">
-          <h2 class="section-title" id="course-title">Meu Curso</h2>
-          <p class="content-text" id="course-text">Estou fazendo Ensino Médio com técnico de Desenvolvimento de Sistemas no Szymanski. Aqui vão algumas fotos da minha turma e projetos.</p>
-          <div class="photo-grid">
-            <div class="photo-placeholder">
-              <img src="cds1.jpg" alt="Foto do meu curso" class="page-image">
-              <div class="photo-caption">Os mais mais do szy</div> </div>
-            <div class="photo-placeholder">
-              <img src="turmacds.jpg" alt="Turma 2°CDS" class="page-image">
-              <div class="photo-caption">Turma 2°CDS</div> </div>
-            <div class="photo-placeholder">
-              <img src="passeioCDS.jpg" alt="Minha área de estudo" class="page-image">
-              <div class="photo-caption">Passeios</div> </div>
-            <div class="photo-placeholder">
-              <img src="feira.jpg" alt="Projeto acadêmico" class="page-image">
-              <div class="photo-caption">Projeto pra Feira de Profissões</div> </div>
-          </div>
-        </div>
-
-        <div id="friends" class="page">
-          <h2 class="section-title" id="friends-title">Meus Amigos</h2>
-          <p class="content-text" id="friends-text">Amigos são a família que escolhemos. Aqui estão as pessoas especiais que fazem parte da minha vida e tornam cada momento mais especial.</p>
-          <div class="photo-grid">
-            <div class="photo-placeholder">
-              <img src="amigos.jpeg" alt="Foto com meus amigos" class="page-image">
-              <div class="photo-caption">Foto com meus amigos</div> </div>
-            <div class="photo-placeholder">
-              <img src="niverpt2.jpg" alt="Festa com amigos" class="page-image">
-              <div class="photo-caption">Festa com amigos</div> </div>
-            <div class="photo-placeholder">
-              <img src="gabi.jpg" alt="Amigos em um encontro" class="page-image">
-              <div class="photo-caption">Amigos em um encontro</div> </div>
-            <div class="photo-placeholder">
-              <img src="tlc.jpg" alt="Bons momentos com amigos" class="page-image">
-              <div class="photo-caption">boas memorias</div> </div>
-          </div>
-        </div>
-
-        <div id="family" class="page">
-          <h2 class="section-title" id="family-title">Minha Família</h2>
-          <p class="content-text" id="family-text">A família é a base de tudo. Aqui compartilho um pouco sobre as pessoas que me apoiam, me inspiram e estão sempre ao meu lado.</p>
-          <div class="photo-grid">
-            <div class="photo-placeholder">
-              <img src="familia.jpg" alt="Foto da minha família" class="page-image">
-              <div class="photo-caption">Foto da minha família</div> </div>
-            <div class="photo-placeholder">
-              <img src="family.jpg" alt="Momentos felizes em família" class="page-image">
-              <div class="photo-caption">Momentos felizes em família</div> </div>
-            <div class="photo-placeholder">
-              <img src="family22.jpg" alt="Reunião de família" class="page-image">
-              <div class="photo-caption">Foto em família</div> </div>
-            <div class="photo-placeholder">
-              <img src="nivervo.jpg" alt="Celebração familiar" class="page-image">
-              <div class="photo-caption">Celebração familiar</div> </div>
-          </div>
-        </div>
-
-        <div id="dreams" class="page">
-          <h2 class="section-title" id="dreams-title">Meus Sonhos</h2>
-          <p class="content-text" id="dreams-text">Sonhar é essencial para crescer. Aqui compartilho minhas aspirações, objetivos e tudo aquilo que me motiva a seguir em frente todos os dias.</p>
-          <div class="photo-grid">
-            <div class="photo-placeholder">
-              <img src="engmac.jpg" alt="Engenharia Mecânica" class="page-image">
-              <div class="photo-caption">Engenharia Mecânica</div> </div>
-            <div class="photo-placeholder">
-              <img src="casamnto.jpg" alt="Casamento e Família" class="page-image">
-              <div class="photo-caption">Casamento e Família</div> </div>
-            <div class="photo-placeholder">
-              <img src="viagem.jpg" alt="Viagem pelo mundo" class="page-image">
-              <div class="photo-caption">Viagem pelo mundo</div> </div>
-            <div class="photo-placeholder">
-              <img src="casa.jpg" alt="Minha futura casa" class="page-image">
-              <div class="photo-caption">Minha futura casa</div> </div>
-          </div>
-        </div>
-      </main>
+        </main>
     </div>
+
     <script src="script.js"></script> 
   </body>
 </html>
